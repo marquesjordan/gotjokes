@@ -1,4 +1,9 @@
 Gotjokes::Application.routes.draw do
+  
+  get "jokes/index" => 'jokes#index', as: :jokes
+  get "jokes/new" => 'jokes#new', as: :new_joke
+  post "jokes/" => 'jokes#create'
+  get "jokes/edit"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
