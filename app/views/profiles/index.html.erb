@@ -1,0 +1,30 @@
+<h1>Profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name </th>
+      <th>Videos </th>
+      <th>Image </th>
+      <th>Location </th>
+      <th>Biography </th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profiles.each do |p| %>
+      <tr>
+        <td><%= p.name %></td>
+        <td><%= p.videos %></td>
+        <td><%= p.image %></td>
+        <td><%= p.location %></td>
+        <td><%= p.bio %></td>
+      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
