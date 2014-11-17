@@ -1,4 +1,21 @@
 Gotjokes::Application.routes.draw do
+
+ get 'categories/' => 'categories#index', as: :categories
+
+ get 'categories/new' => 'categories#new', as: :new_question
+
+ get 'categories/:id' => 'categories#show', as: :question
+
+ post 'categories/' => 'categories#create'
+
+ get 'categories/:id/edit' => 'categories#edit', as: :edit_question
+
+ patch 'categories/:id' => 'categories#update', as: :update_question
+ 
+ delete 'categories/:id' => 'categories#destroy', as: :delete_question
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
