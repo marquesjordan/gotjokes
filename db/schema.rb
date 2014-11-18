@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118024405) do
+ActiveRecord::Schema.define(version: 20141118060009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "jokes", force: true do |t|
-    t.integer  "views"
-    t.integer  "totalvotes"
+    t.integer  "views",              default: 0
+    t.integer  "totalvotes",         default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "video_file_name"

@@ -20,6 +20,12 @@ class JokesController < ApplicationController
   def edit
   end
 
+  def destroy
+    @joke = Joke.find(params[:id])
+    @joke.destroy
+    redirect_to jokes_path
+  end
+
   private
 
   	def joke_params

@@ -5,6 +5,14 @@
 	<div>
 		Video: <%= video_tag(j.video.url, size: "100x100") %><br>
 		Total Views: <%= j.views %><br>	
-		Total Votes: <%= j.totalvotes %><br>	
+		Total Votes: <%= j.totalvotes %><br>
+		<%= link_to 'Destroy', j, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<div class="container">
+		<div class="videos">
+    			<%= video_tag(j.video.url, size: "271x280") %><br>
+    			<p>Total Views: <%= j.views %><p>
+  	</div>
+  </div>
+
 	</div>
 <% end %> 
