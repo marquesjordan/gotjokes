@@ -1,0 +1,19 @@
+<p id="notice"><%= name %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @profile.name %>
+</p>
+
+<p>
+  <strong>Dept:</strong>
+  <%= @pastry.dept %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @pastry.price %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profile_path %>
