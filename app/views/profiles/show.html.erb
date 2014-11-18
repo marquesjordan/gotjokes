@@ -1,4 +1,4 @@
-<p id="notice"><%= name %></p>
+
 
 <p>
   <strong>Name:</strong>
@@ -6,14 +6,24 @@
 </p>
 
 <p>
-  <strong>Dept:</strong>
-  <%= @pastry.dept %>
+  <strong>Videos:</strong>
+  <%= @profile.videos %>
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @pastry.price %>
+  <strong>Images:</strong>
+  <%= @profile.image %>
+</p>
+  <strong>Location:</strong>
+  <%= @profile.location %>
+</p>
+  <strong>Biography:</strong>
+  <%= @profile.bio %>
 </p>
 
+
+
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profile_path %>
+<%= link_to 'Back', profiles_path %>
+
+     

@@ -5,18 +5,50 @@ class ProfilesController < ApplicationController
 	end
 
 	def show
-		@profile = User.find(params[:id])
+		@profile = Profile.find(params[:id])
+	end
+
+    def new
+		@profile = Profile.new
+	end
+
+	def create 
+		@profile = Profile.new(profile_params)
+		if @profile.save
+			redirect_to profiles_path
+		else
+			render 'new'
+		end
 	end
 
 	def edit
-		
+		@profile = Profile.find(params[:id])
 	end
 
 	def update
-		
+		@profile = Profile.find(params[:id])
+		if @profile.update_attributes(profile_params)
+			redirect_to profiles_path
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy
-
+		@profile = Profile.find(params[:id])
+		@profile.destroy
+		redirect_to profiles_path
 	end 
 end
+
+private
+	def profile_params
+		params.require(:profile).permit(
+			:name, :videos, :image, :location, :bio, profile_ids: [])
+	end
+
+
+
+	
+	
+
