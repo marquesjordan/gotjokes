@@ -1,1 +1,7 @@
-index.html.erb
+<h1> Votes Index </h1>
+
+<% @votes.each do |f| %>
+  <li>
+    <%= f.vote %>
+  </li>
+<% end %>
