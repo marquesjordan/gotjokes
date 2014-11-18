@@ -13,4 +13,6 @@ profiles = Profile.create([
   {name: "FoolsRus", videos: "none", image: "none", location: "Culver City, CA", bio:"I wanna make you want me gurl"},
   ])
 
-  
+usercomments = UserComment.create([{
+  description: "your joke was funny"
+  }])  

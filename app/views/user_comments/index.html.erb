@@ -1,1 +1,6 @@
-index.html.erb
+<% @user_comments.each do |f| %>
+  <li>
+    <strong> <%= f.description %> </strong> 
+    <%= link_to "Click for comment info", user_comment_path(f) %>
+  </li>
+  <% end %>
