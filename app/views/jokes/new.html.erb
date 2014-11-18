@@ -2,9 +2,9 @@
 
 <div>
 	<%= form_for @joke, :url => {:action => :create}  do |f| %>
-
-		<div>Views: <%= f.text_field :views %></div>
-		<div>Votes: <%= f.text_field :totalvotes%></div>
+		<div><%= f.file_field :video %></div><br>
+		<div>Views: <%= f.text_field :views %></div><br>
+		<div>Votes: <%= f.text_field :totalvotes%></div><br>
 		<div><%= f.submit %>
 
 	<% end %> 
