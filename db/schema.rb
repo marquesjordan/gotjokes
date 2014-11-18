@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 20141117231159) do
 
   create_table "votes", force: true do |t|
     t.integer  "vote"
+
+  end
+
+  create_table "profiles", force: true do |t|
+    t.string   "name"
+    t.string   "videos"
+    t.string   "image"
+    t.string   "location"
+    t.string   "bio"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
