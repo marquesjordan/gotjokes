@@ -1,2 +1,11 @@
-<h1>Jokes#new</h1>
-<p>Find me in app/views/jokes/new.html.erb</p>
+<h1>Add A New Joke</h1>
+
+<div>
+	<%= form_for @joke do |f| %>
+
+		<div>Views: <%= f.text_field :views %></div>
+		<div>Votes: <%= f.text_field :totalvotes%></div>
+		<div><%= f.submit %>
+
+	<% end %> 
+</div>
