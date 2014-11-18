@@ -8,7 +8,7 @@ class JokesController < ApplicationController
   end
 
   def create
-  	@joke = joke.new(joke_params)
+  	@joke = Joke.new(joke_params)
   	if @joke.save
   		redirect_to jokes_path
   	else
@@ -23,6 +23,6 @@ class JokesController < ApplicationController
   private
 
   	def joke_params
-  		params.require(:views, :totalviews)
+  		params.require(:joke).permit(:views, :totalvotes)
   	end
 end

@@ -1,7 +1,7 @@
 <h1>Add A New Joke</h1>
 
 <div>
-	<%= form_for @joke do |f| %>
+	<%= form_for @joke, :url => {:action => :create}  do |f| %>
 
 		<div>Views: <%= f.text_field :views %></div>
 		<div>Votes: <%= f.text_field :totalvotes%></div>
