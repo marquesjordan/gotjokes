@@ -1,5 +1,7 @@
 Gotjokes::Application.routes.draw do
   
+  root 'application#index'
+
   # get "jokes/index" => 'jokes#index', as: :jokes
   # get "jokes/new" => 'jokes#new', as: :new_joke
   # post "jokes/" => 'jokes#create'
