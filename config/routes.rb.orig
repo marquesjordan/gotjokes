@@ -1,5 +1,8 @@
 Gotjokes::Application.routes.draw do
   
+<<<<<<< HEAD
+  resources :profiles
+=======
   # get "jokes/index" => 'jokes#index', as: :jokes
   # get "jokes/new" => 'jokes#new', as: :new_joke
   # post "jokes/" => 'jokes#create'
@@ -14,8 +17,7 @@ Gotjokes::Application.routes.draw do
   delete 'jokes/:id'    =>    'jokes#destroy',  as: :delete_joke
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  
-  resources :profiles
+>>>>>>> 2c01aa61c80291aee0aed898ec69e45b6abcd635
 
   resources :votes
 
