@@ -14,5 +14,5 @@ var app = angular.module('myApp', ['ui.router', 'templates'])
 })
 
 .controller('homeController', function($scope) {
-  $scope.test = "test test test";
+  console.log("angular console log test");
 });
