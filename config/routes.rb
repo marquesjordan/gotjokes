@@ -21,7 +21,7 @@ Gotjokes::Application.routes.draw do
 
   resources :user_comments
 
- 
+  
 
 
 end

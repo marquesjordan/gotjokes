@@ -1,2 +1,0 @@
-      invoke  active_record
-      create    db/migrate/20141118060009_defualt_column.rb
