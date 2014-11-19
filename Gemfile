@@ -6,7 +6,16 @@ gem 'rails', '4.0.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+#Add factory girl
+gem 'factory_girl_rails'
 
+group :development, :test do
+# TESTING rspec
+  gem 'rspec-rails'
+
+# TESTING shoulds tools
+  gem 'shoulda-matchers', require: false
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
