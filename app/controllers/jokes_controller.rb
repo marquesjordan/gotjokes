@@ -20,6 +20,7 @@ class JokesController < ApplicationController
   def show
     @joke = Joke.find(params[:id])
     @joke.views += 1
+    @joke.save
     @trendingjokes = Joke.all
 
     @joke.user_comments.build

@@ -21,7 +21,7 @@ class UserCommentsController < ApplicationController
     joke.user_comments << UserComment.new(:description => params[:description])
     # raise params.inspect
     if joke.save
-      render 'new'
+      redirect_to joke_path(params[:joke_id])
     else
       render 'new'
     end

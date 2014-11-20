@@ -1,4 +1,5 @@
 <div class="container">
+
 	<div class="row">	
 		<div class="col-md-8" id="showVid">
 				<div class="row">
@@ -6,7 +7,7 @@
 					<div class="col-md-6">
 						<div class="center-block">
 							<div id="bigvid">
-								<%= video_tag(@joke.video.url, size: "600x350", class: "video-js vjs-default-skin vjs-big-play-centered", controls:true) %>
+								<%= video_tag(@joke.video.url, size: "600x350", class: "video-js vjs-default-skin vjs-big-play-centered stylevideo", controls:true) %>
 								Views: <%= @joke.views %>
 							</div>
 						</div>
@@ -22,15 +23,17 @@
 				</div>
 			<% end %>
 		</div>
+
 	</div>
+
 	<div class="row">
 		<div class="col-md-8" id="commentbox">
 			<h1>Comments:</h1>
 
 			<%= form_for(@usercomment, url: {controller: "user_comments", action: "create"}) do %>
 						<%= hidden_field_tag(:joke_id, @joke.id) %>
-						<%= text_area_tag(:description) %><br>
-						<%= submit_tag( "Submit Comment") %>
+						<%= text_area_tag :description, nil, class: "form-control"  %><br>
+						<%= submit_tag( "Submit Comment", class: "btn btn-danger") %>
 
 			<% end %>
 
@@ -42,4 +45,5 @@
 		</div>
 		<div class="col-md-4"></div>
 	</div>
+
 </div>
