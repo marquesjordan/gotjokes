@@ -5,6 +5,8 @@
 	border: 1px solid red;
 	border-radius: 20px;
 }
+<<<<<<< HEAD
+=======
 
 .video-js{
 	margin-top: 20px;
@@ -30,6 +32,6 @@
 }
 
 #commentbox{
-
+	
 }
-  
+>>>>>>> association

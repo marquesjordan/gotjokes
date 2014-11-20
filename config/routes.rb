@@ -25,6 +25,12 @@ Gotjokes::Application.routes.draw do
 
   resources :votes
 
-  resources :user_comments
+  get 'user_comments/index'     =>    'user_comments#index',    as: :user_comments
+  get 'user_comments/new'       =>    'user_comments#new',      as: :new_user_comments
+  get "user_comments/:id"       =>    'user_comments#show',     as: :user_comment
+  post 'user_comments/create'   =>    'user_comments#create',   as: :create_user_comment
+  get "user_comments/:id/edit"  =>    'user_comments#edit',     as: :edit_user_comment
+  patch 'user_comments/:id'     =>    'user_comments#update'
+  delete 'user_comments/:id'    =>    'user_comments#destroy',  as: :delete_user_comment
 
 end

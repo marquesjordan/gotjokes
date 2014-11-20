@@ -10,12 +10,18 @@ class UserCommentsController < ApplicationController
 
   def new
     @user_comment = UserComment.new
+    # comment = params[:comment]
+    # @id_joke = params[:j_id]
+    raise params.inspect
+    UserComment.create(description: comment, joke_id: @id_joke)
   end
 
   def create 
-    @user_comment = UserComment.new(user_comment_params)
-    if @user_comment.save
-      redirect_to user_comments_path
+    joke = Joke.find(params[:joke_id])
+    joke.user_comments << UserComment.new(:description => params[:description])
+    # raise params.inspect
+    if joke.save
+      redirect_to joke_path(params[:joke_id])
     else
       render 'new'
     end
@@ -42,8 +48,7 @@ class UserCommentsController < ApplicationController
 
   private
   def user_comment_params
-    params.require(:user_comment).permit(
-      )
+    params.require(:user_comment).permit(:description)
   end
 
 end
