@@ -1,5 +1,11 @@
 Gotjokes::Application.routes.draw do
   
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  post 'login', to: 'sessions#create', as: 'createlogin'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+
+  # get "sessions/new"
   # get "jokes/index" => 'jokes#index', as: :jokes
   # get "jokes/new" => 'jokes#new', as: :new_joke
   # post "jokes/" => 'jokes#create'
@@ -15,8 +21,13 @@ Gotjokes::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   
-  resources :users 
 
+  resources :sessions
+  
+  resources :users 
+  
+  root 'users#index'
+  
   resources :jokes
 
   resources :profiles
