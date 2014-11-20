@@ -1,1 +1,19 @@
-asdfasdfasdfasdfasdf
+home.html.erb
+{{test}}
+<br>  
+
+<button ng-click="changeVote(vote, 'up')" class="btn btn-success">Up</button>
+<br>
+<button ng-click="changeVote(vote, 'down')" class="btn btn-danger">Down</button>
+Vote: {{vote}}
+<br>
+
+<button ng-click="up = up + 1" ng-init="up=0"
+ class="btn btn-success">Up</button>
+<br>
+<input type="button" value="Input" ng-click="down = down + 1" ng-init="down=0" class="btn btn-danger">
+<br>
+up votes: {{up}}
+down votes: {{down}}
+
+

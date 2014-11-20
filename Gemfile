@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-# rails gems
+# angular gem
 gem 'bower-rails'
+# angular templates
 gem 'angular-rails-templates'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -44,7 +45,7 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'

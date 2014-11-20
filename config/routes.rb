@@ -1,5 +1,9 @@
 Gotjokes::Application.routes.draw do
   
+  # scope 'api', defaults: {format: :json} do
+  #   resources :jokes
+  # end
+
   root 'application#index'
 
   # get "jokes/index" => 'jokes#index', as: :jokes
@@ -22,8 +26,5 @@ Gotjokes::Application.routes.draw do
   resources :votes
 
   resources :user_comments
-
-  
-
 
 end
