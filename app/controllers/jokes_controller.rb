@@ -5,6 +5,7 @@ class JokesController < ApplicationController
 
   def new
   	@joke = Joke.new
+
   end
 
   def create
@@ -16,7 +17,25 @@ class JokesController < ApplicationController
   	end
   end
 
-  def edit
+  def show
+    @joke = Joke.find(params[:id])
+    @joke.views += 1
+    @trendingjokes = Joke.all
+
+    @joke.user_comments.build
+    @usercomment = UserComment.new
+    # @user_comment = UserComment.new
+    @jokecomments = UserComment.where(joke_id: @joke.id)
+  end
+
+  def update
+    @joke = Joke.find(params[:id])
+    raise params.inspect
+    if @joke.update_attributes(params.require(:joke).permit(joke_params))
+      redirect_to joke_path
+    else
+      render 'show'
+    end
   end
 
   def destroy
@@ -28,6 +47,6 @@ class JokesController < ApplicationController
   private
 
   	def joke_params
-  		params.require(:joke).permit(:views, :totalvotes, :video)
+      params.require(:joke).permit(:views, :totalvotes, :video, :user_comments => [:description])
   	end
 end

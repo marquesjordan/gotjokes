@@ -13,6 +13,8 @@ group :development, :test do
 # TESTING rspec
   gem 'rspec-rails'
 
+  gem 'pry-byebug'
+
 # TESTING shoulds tools
   gem 'shoulda-matchers', require: false
 end
