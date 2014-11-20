@@ -34,6 +34,15 @@ angular.module('myApp', ['ui.router', 'templates'])
     alert($scope.vote);
   };
 
+  $scope.upVote = function(post){
+    post.votes++;
+    updateVote(post.id,post.votes);
+  };
+  $scope.downVote = function(post){
+    post.votes--;
+    updateVote(post.id,post.votes);
+  };
+
 }]);
 
 
