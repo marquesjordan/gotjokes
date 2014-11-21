@@ -5,6 +5,7 @@ class Joke < ActiveRecord::Base
 
     has_many :user_comments
     belongs_to :user
+    has_many :votes
     accepts_nested_attributes_for :user_comments
     
 

@@ -14,8 +14,6 @@ gem 'pg'
 #Add factory girl
 gem 'factory_girl_rails'
 
-
-
 group :development, :test do
 # TESTING rspec
   gem 'rspec-rails'
@@ -32,6 +30,7 @@ group :production do
 end
 
 gem "paperclip", "~> 4.2"
+gem "paperclip-ffmpeg"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 

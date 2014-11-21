@@ -10,6 +10,10 @@
 								<%= video_tag(@joke.video.url, size: "600x350", class: "video-js vjs-default-skin vjs-big-play-centered stylevideo", controls:true) %>
 								Views: <%= @joke.views %>
 							</div>
+						</div><br>
+						<div>
+							<%= link_to image_tag("Like_thumb.png", size: "100x100", :border => 0), new_vote_path(:vote => 1, :user_id => current_user, :joke_id => @joke.id), {:action => 'create', :controller => 'votes'}%> 
+							<%= link_to image_tag("like_thumbs_down.png", size: "100x100", :border => 0), new_vote_path(:vote => -1, :user_id => current_user, :joke_id => @joke.id), {:action => 'create', :controller => 'votes'}%>
 						</div>
 					</div>
 					<div class="col-md-1"></div>
