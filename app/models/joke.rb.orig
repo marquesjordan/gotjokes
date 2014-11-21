@@ -1,4 +1,5 @@
 class Joke < ActiveRecord::Base
+<<<<<<< HEAD
 	has_attached_file :video,
     processors: lambda { |a| a.is_video? ? [ :ffmpeg ] : [ :thumbnail ] }
     do_not_validate_attachment_file_type :video
@@ -7,4 +8,8 @@ class Joke < ActiveRecord::Base
     accepts_nested_attributes_for :user_comments
     
 end
+=======
+	belongs_to :category
+end
 
+>>>>>>> category
