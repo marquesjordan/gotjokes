@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+<h1>Add A New Joke</h1>
+
+<div>
+	<%= form_for @joke, :url => {:action => :create}  do |f| %>
+		<div><%= f.file_field :video %></div><br>
+		<div>Views: <%= f.text_field :views %></div><br>
+		<div>Votes: <%= f.text_field :totalvotes%></div><br>
+		<div><%= f.submit %>
+
+	<% end %> 
+</div>
+=======
+<%= form_for @joke do |f| %>
+ 
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+>>>>>>> category
