@@ -14,6 +14,8 @@ gem 'pg'
 #Add factory girl
 gem 'factory_girl_rails'
 
+
+
 group :development, :test do
 # TESTING rspec
   gem 'rspec-rails'
@@ -42,7 +44,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap-sass', '~> 3.3.1'
-
+gem 'bcrypt', '~> 3.1.7'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
@@ -58,7 +60,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+
 
 # Use unicorn as the app server
 # gem 'unicorn'

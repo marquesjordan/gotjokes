@@ -10,6 +10,7 @@
   <script src="//vjs.zencdn.net/4.10/video.js"></script>
 </head>
 
+
 <body ng-app="myApp">
 
   <!-- start of nav bar -->
@@ -45,6 +46,27 @@
 <a ui-sref="show">SHOW</a>
 <a ui-sref="list">JOKES LIST</a>
 
+
+
+
+    <div id="container">
+        
+        <% flash.each do |name,msg| %>
+            <%= content_tag :div, msg, id: "flash_#{name}" %>
+        <% end %>
+    
+    <div id="user_header">
+    <% if current_user %>
+      Logged in as <%= current_user.email %>.
+      <%= link_to "Log Out", logout_path %>
+    <% else %>
+      <%= link_to "Sign Up", new_user_path %> or
+      <%= link_to "Log In", new_session_path %>
+    <% end %>
+    </div>
+     
+        
+    </div>
 
 <%= yield %>
 
