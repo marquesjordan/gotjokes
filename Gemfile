@@ -5,7 +5,7 @@ gem 'rails', '4.0.4'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
-gem 'bcrypt', '~> 3.1.7'
+
 #Add factory girl
 gem 'factory_girl_rails'
 
@@ -32,7 +32,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap-sass', '~> 3.3.1'
-
+gem 'bcrypt', '~> 3.1.7'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
