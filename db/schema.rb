@@ -44,6 +44,13 @@ ActiveRecord::Schema.define(version: 20141119185713) do
     t.integer  "joke_id"
   end
 
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "votes", force: true do |t|
     t.integer  "vote"
     t.datetime "created_at"
