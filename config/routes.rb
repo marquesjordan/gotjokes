@@ -1,18 +1,9 @@
 Gotjokes::Application.routes.draw do
 
- get 'categories/' => 'categories#index', as: :categories
+resources :jokes
+resources :categories
 
- get 'categories/new' => 'categories#new', as: :new_category
-
- get 'categories/:id' => 'categories#show', as: :category
-
- post 'categories/' => 'categories#create'
-
- get 'categories/:id/edit' => 'categories#edit', as: :edit_category
-
- patch 'categories/:id' => 'categories#update', as: :update_category
-
- delete 'categories/:id' => 'categories#destroy', as: :delete_category
+root 'jokes#index'
 
 
 

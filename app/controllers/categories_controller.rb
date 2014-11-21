@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(params.require(:category).permit(:name, :description, :comment))
+    @category = Category.new(params.require(:category).permit(:name, :description))
     if @category.save
       redirect_to categories_path
     else 
@@ -29,7 +29,7 @@ class CategoriesController < ApplicationController
 
   def update
     @category = Category.find(params[:id])
-    if @category.update_attributes(params.require(:category).permit(:name, :description, :comment))
+    if @category.update_attributes(params.require(:category).permit(:name, :description))
       redirect_to category_path
     else
       render "edit"
