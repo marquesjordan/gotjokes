@@ -9,7 +9,10 @@ class JokesController < ApplicationController
   end
 
   def create
+    @user = current_user
+    
   	@joke = Joke.new(joke_params)
+    @joke.user_id = @user.id
   	if @joke.save
   		redirect_to jokes_path
   	else
@@ -21,11 +24,11 @@ class JokesController < ApplicationController
     @joke = Joke.find(params[:id])
     @joke.views += 1
     @joke.save
-    @trendingjokes = Joke.all
 
+    @trendingjokes = Joke.all
     @joke.user_comments.build
+
     @usercomment = UserComment.new
-    # @user_comment = UserComment.new
     @jokecomments = UserComment.where(joke_id: @joke.id)
   end
 
@@ -48,6 +51,6 @@ class JokesController < ApplicationController
   private
 
   	def joke_params
-      params.require(:joke).permit(:views, :totalvotes, :video, :user_comments => [:description])
+      params.require(:joke).permit(:views, :totalvotes, :video, :user_id, :user_comments => [:description])
   	end
 end

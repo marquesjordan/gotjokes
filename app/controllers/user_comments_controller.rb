@@ -17,6 +17,7 @@ class UserCommentsController < ApplicationController
   end
 
   def create 
+
     joke = Joke.find(params[:joke_id])
     joke.user_comments << UserComment.new(:description => params[:description])
     # raise params.inspect

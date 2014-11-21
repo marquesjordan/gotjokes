@@ -4,6 +4,8 @@ class Joke < ActiveRecord::Base
     do_not_validate_attachment_file_type :video
 
     has_many :user_comments
+    belongs_to :user
     accepts_nested_attributes_for :user_comments
     
+
 end
