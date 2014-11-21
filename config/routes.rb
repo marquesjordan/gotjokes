@@ -1,8 +1,5 @@
 Gotjokes::Application.routes.draw do
   
-  # scope 'api', defaults: {format: :json} do
-  #   resources :jokes
-  # end
 
   root 'application#index'
 
@@ -18,6 +15,8 @@ Gotjokes::Application.routes.draw do
   get "jokes/:id/edit"  =>    'jokes#edit',     as: :edit_joke
   patch 'jokes/:id'     =>    'jokes#update'
   delete 'jokes/:id'    =>    'jokes#destroy',  as: :delete_joke
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   
