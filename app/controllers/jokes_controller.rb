@@ -50,6 +50,6 @@ class JokesController < ApplicationController
   private
 
   	def joke_params
-      params.require(:joke).permit(:views, :totalvotes, :video, :user_id, :user_comments => [:description])
+      params.require(:joke).permit(:views, :totalvotes, :video, :youtube, :description, :user_id, :user_comments => [:description])
   	end
 end

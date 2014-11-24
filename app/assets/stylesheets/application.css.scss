@@ -1,6 +1,63 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body{
+	background-color: #F0F0F0;
+}
+
+// CSS SHOW PAGE
+#middle{
+	background-color: white;
+	border: 1px solid #F0F0F1;
+}
+
+#trend{
+	background-color: white;
+	border: 1px solid #F0F0F0;
+}
+#view{
+	color: red;
+	float: right;
+	margin-right: 15px;
+
+}
+#viewrow{
+	border-bottom: 1px solid #F0F0F0;
+
+}
+#uprow{
+	border-bottom: 1px solid #F0F0F0;
+	margin-bottom: 10px;
+}
+
+.comments{
+	background-color: #F0F0F0;
+}
+
+.funny{
+	float: left;
+}
+
+.fon{
+
+	width: 300px;
+	max-width: none !important;
+}
+#words{
+	margin: 20px;
+}
+
+.showcontainer{
+	width: 970px;
+	max-width: none !important;
+}
+
+#bigvid{
+	  margin-left: auto;
+    margin-right: auto;
+    
+}
+
 .videos {
 	border: 1px solid red;
 	border-radius: 20px;
@@ -8,6 +65,15 @@
 
 .video-js{
 	margin-top: 20px;
+}
+
+.side{
+	float: left;
+}
+
+#sidewords{
+	width: 130px;
+	margin-left: 10px;
 }
 
 .stylevideo{
