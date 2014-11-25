@@ -10,36 +10,40 @@
 				<% else %> 
 
 					<!-- <iframe width="560" height="315" src="//www.youtube.com/embed/bk0yndGLWa8" frameborder="0" allowfullscreen></iframe> -->
-
-				 	<iframe src= <%= @src %> width="620" height="320" ></iframe> 
+					<% youtube_id = @joke.youtube.split("=").last %>
+    			<% src = "//www.youtube.com/embed/#{youtube_id}?rel=0" %>
+				 	<iframe src= <%= src %> width="620" height="320" ></iframe> 
 				<% end %>
 							
 							<div class="row" id="viewrow">
 												
-									<div class="lead" id="view">Views: <%= @joke.views %></div>
+									<div class="lead"><span id="vote"><strong>Votes: </strong><%= @votes.length %></span><span id="view"><strong>Views: </strong><%= @joke.views %></span></div>
 							
 							</div>
 							<div class="row" id="uprow">						
-									<div class="container"><strong>Uploaded: <%= @joke.created_at.strftime("%b %e,%l:%M %p") %></strong></div><br>
-									<div class="container"><strong>By: <%= @joke.user_id %></strong></div>
+									<div id="details"><strong>Uploaded: <%= @joke.created_at.strftime("%b %e,%l:%M %p") %></strong><br><br>
+									<strong>By: <%= @joke.user_id %></strong>
+									</div>
 							</div>
 
 								<div class="row">
 										<div class="col-xs-3 col-sm-3 funny">
-											<%= link_to image_tag("Like_thumb.png", size: "100x100", :border => 0), new_vote_path(:vote => 1, :user_id => current_user, :joke_id => @joke.id), {:action => 'create', :controller => 'votes'}%> 
+											<%= link_to image_tag("Like_thumb.png", size: "75x75", :border => 0), new_vote_path(:vote => 1, :user_id => current_user, :joke_id => @joke.id), {:action => 'create', :controller => 'votes'}%><br>
+											<p>Likes: <%= @likes.length %></p> 
 										</div>
 										<div class="col-xs-6 col-sm-6 funny">
 											<h2 id="words">Funny or Not?</h2>
 										</div>
 										<div class="col-xs-3 col-sm-3 funny">
-											<%= link_to image_tag("like_thumbs_down.png", size: "100x100", :border => 0), new_vote_path(:vote => -1, :user_id => current_user, :joke_id => @joke.id), {:action => 'create', :controller => 'votes'}%>
+											<%= link_to image_tag("like_thumbs_down.png", size: "75x75", :border => 0), new_vote_path(:vote => -1, :user_id => current_user, :joke_id => @joke.id), {:action => 'create', :controller => 'votes'}%>
+											<p>Dislikes: <%= @dislikes.length %></p> 
 										</div>
 								</div>
 
 
 					<div class="comments"> 	
 									
-							<h1 class="container">Comments:</h1>
+							<h1 id="commenttitle">Comments:</h1>
 
 							<%= form_for(@usercomment, url: {controller: "user_comments", action: "create"}) do %>
 										<%= hidden_field_tag(:joke_id, @joke.id) %>

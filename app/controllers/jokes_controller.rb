@@ -27,14 +27,13 @@ class JokesController < ApplicationController
     @trendingjokes = Joke.all
     @joke.user_comments.build
 
-    youtube_id = @joke.youtube.split("=").last
-    @src = "//www.youtube.com/embed/#{youtube_id}"
-
     @usercomment = UserComment.new
     @jokecomments = UserComment.where(joke_id: @joke.id)
 
     @votes = Vote.where(joke_id: @joke.id)
-    # @likes = 
+    @likes = Vote.where(joke_id: @joke.id).where(vote: 1)
+    @dislikes = Vote.where(joke_id: @joke.id).where(vote: -1)
+
   end
 
   def update

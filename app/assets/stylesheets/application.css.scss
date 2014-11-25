@@ -19,7 +19,14 @@ body{
 	color: red;
 	float: right;
 	margin-right: 15px;
-
+}
+#vote{
+	color: red;
+	float: left;
+	margin-left: 15px;
+}
+#details{
+	margin-left: 15px;	
 }
 #viewrow{
 	border-bottom: 1px solid #F0F0F0;
@@ -29,7 +36,9 @@ body{
 	border-bottom: 1px solid #F0F0F0;
 	margin-bottom: 10px;
 }
-
+#commenttitle{
+	margin-left: 15px;
+}
 .comments{
 	background-color: #F0F0F0;
 }
