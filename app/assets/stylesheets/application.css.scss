@@ -6,11 +6,63 @@ body{
 }
 
 // CSS FOR JOKE INDEX PAGE
+.whole{
+	background-color: #F0F0F0;
+}
+
+.whole-left{
+	background-color: black;
+	width:200px;
+	float: left;
+}
+
+.whole-right{
+	background-color: black;
+	width:200px;
+	float: right;
+}
+
+
+div.img-left {
+    margin: 0 auto;
+    padding-left: 17px;
+    padding-top: 20px;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+}
+
+div.img-left img {
+    display: inline;
+    margin: 5px;
+    // border: 1px solid #ffffff;
+}
+
+div.img-right {
+    margin: 0 auto;
+    padding-right: 17px;
+    padding-top: 15px;
+    height: auto;
+    width: auto;
+    float: right;
+    text-align: center;
+}
+
+div.img-right img {
+    display: inline;
+    margin: 5px;
+    // border: 1px solid #ffffff;
+}
+
+
+
+
 .joke_index_container{
 	width: 970px;
 	max-width: none !important;
 	margin: 0 auto;
-	background-color: white;
+	background-color: #F0F0F0;
 }
 .thumbs{
 	float: left;
@@ -20,6 +72,9 @@ body{
 }
 #index_title{
 	text-align: center;
+	color: red;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 48px;
 }
 #space{
 	margin-top: 45px;

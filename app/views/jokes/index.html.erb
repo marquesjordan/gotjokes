@@ -1,10 +1,42 @@
 
+<div class="whole">
+  <div class="whole-left">
+	<div class="img-left">
+	  <a target="_blank" href="">
+	    <img src="http://moatsearch-data.s3.amazonaws.com/creative_thumbs/70/12/b0/7012b0588b4b20851313c37cd4025062_thumb.jpg" alt="Klematis" width="150" height="400">
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <img src="http://moatsearch-data.s3.amazonaws.com/creative_thumbs/fc/7c/db/fc7cdbfa512134fddc072f2514179cc8_thumb.jpg" alt="Klematis" width="150" height="400">
+	  </a>	
+	</div>
+  </div>
+  <div class="whole-right">
+	<div class="img-right">
+	  <a target="_blank" href="">
+	   <img src="http://moatsearch-data.s3.amazonaws.com/creative_thumbs/21/1d/fe/211dfe954c2803f4ece91f081aefb97d_thumb.jpg" alt="Klematis" width="150" height="150">
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <img src="http://moatsearch-data.s3.amazonaws.com/creative_thumbs/5acd03eb68b94b62fdcf2932b4af5abcebc9b6a7.png" alt="Klematis" width="150" height="400">
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <img src="http://moatsearch-data.s3.amazonaws.com/creative_thumbs/ef/82/ff/ef82ff2e6b45aff13888f0524da88284_thumb.jpg" alt="Klematis" width="150" height="150">
+	  </a>
+	</div>
+  </div>	
 <div class="joke_index_container">
 	<div class="container">
 		<div class="row">		
 
 
-				<h1 id="index_title">List of Jokes</h1>
+				<h1 id="index_title">Today is a good day to LAUGH!!</h1>
 
 				<% @jokes.each do |j| %>
 					<div class="thumbs">
@@ -22,8 +54,8 @@
 
 						Total Views: <%= j.views %><br>	
 						Total Votes: <%= j.totalvotes %><br>
-						<%= link_to 'Show', joke_path(j) %>
-						<%= link_to 'Destroy', j, method: :delete, data: { confirm: 'Are you sure?' } %>
+						<%= link_to 'Watch Now!', joke_path(j) %>
+						
 
 					</div>
 				<% end %> 
@@ -31,3 +63,9 @@
 		</div>				
 	</div>
 </div>
+
+<script>
+	document.getElement
+</script>
+
+
