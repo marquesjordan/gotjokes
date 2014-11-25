@@ -19,19 +19,3 @@
 //= require_tree .
 //= require_tree ../templates
 
-$(document).ready(function() {
-
-  var navbar = $('.navbar-default');
-
-  // Show/Hide on Mouse Scroll
-  $('html').on('DOMMouseScroll mousewheel', function (e) {
-    if(e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
-      // Scroll down
-      navbar.addClass("hide-navbar");
-    } else {
-      // Scroll up
-      navbar.removeClass("hide-navbar");
-    }
-  });
-
-});

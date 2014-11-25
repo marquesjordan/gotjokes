@@ -2,36 +2,36 @@
   <nav class="navbar navbar-inverse" role="navigation">
     <div class="container-fluid">
       <div class="navbarwidth">
-      <div class="navbar-header navbar-brand" >
-        <%= link_to image_tag("logo1.png"), jokes_path, method: :get %>
-      </div>
-      <div class="navbar-header">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><%= link_to "Jokes", jokes_path %></li>
-            <li><%= link_to "New", new_jokes_path %></li>
-          </ul>
+        <div class="navbar-header navbar-brand" >
+          <%= link_to image_tag("logo1.png"), jokes_path, method: :get %>
+        </div>
+        <div class="navbar-header">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><%= link_to "Jokes", jokes_path %></li>
+              <li><%= link_to "New", new_jokes_path %></li>
+            </ul>
+          </div>
+        </div>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control2" placeholder="Search">
+          </div>
+          <button type="submit" class="btn2 btn-default">Submit</button>
+        </form>
+        <div class="navbar-text navbar-right">
+          <div class="marginRight">
+            <% if current_user %>
+              Welcome <%= link_to current_user.email, profile_path(current_user.id) %>
+              <!-- buttons always do POST, Links always do Get by default  -->
+              <%= link_to "Log Out", logout_path, method: :get, :class => "btn btn-danger btn-xs" %> 
+            <% else %>
+              <%= link_to "Log In", new_session_path, method: :get, :class => "btn btn-danger btn-xs"  if !@is_login %>
+              <%= link_to "Sign Up", new_user_path, method: :get, :class => "btn btn-danger btn-xs"  if !@is_login %>
+            <% end %>
+          </div>
         </div>
       </div>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control2" placeholder="Search">
-        </div>
-        <button type="submit" class="btn2 btn-default">Submit</button>
-      </form>
-      <div class="navbar-text navbar-right">
-        <div class="marginRight">
-          <% if current_user %>
-            Welcome <%= link_to current_user.email, profile_path(current_user.id) %>
-            <!-- buttons always do POST, Links always do Get by default  -->
-            <%= link_to "Log Out", logout_path, method: :get, :class => "btn btn-danger btn-xs" %> 
-          <% else %>
-            <%= link_to "Log In", new_session_path, method: :get, :class => "btn btn-danger btn-xs"  if !@is_login %>
-            <%= link_to "Sign Up", new_user_path, method: :get, :class => "btn btn-danger btn-xs"  if !@is_login %>
-          <% end %>
-        </div>
-      </div>
-    </div>
     </div>
   </nav>
   <!-- end of nav bar -->

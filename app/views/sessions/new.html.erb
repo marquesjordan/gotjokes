@@ -7,23 +7,23 @@
         <div class="alert alert-danger"><%= flash[:notice] %></div>
       <% end %>
 
-        <%= form_for sessions_path do |f| %>
-          <%= f.text_field :email, placeholder: "email", :class => "form-control"%>
-          <br>
-          <%= f.password_field :password, placeholder: "password", :class => "form-control" %>
-      
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
+      <%= form_for sessions_path do |f| %>
+        <%= f.text_field :email, placeholder: "email", :class => "form-control"%>
+        <br>
+        <%= f.password_field :password, placeholder: "password", :class => "form-control" %>
+    
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
 
-        </div>
-        
-        <%= f.submit "LOGIN", :class => "btn btn-lg btn-primary btn-block" %>
-        <span>Not a member? <%= link_to "Sign Up", new_user_path, style: "color: #D12943" %></span>
-
-        <% end %>
       </div>
-      <div class="col-md-4"></div>
+      
+      <%= f.submit "LOGIN", :class => "btn btn-lg btn-danger btn-block" %>
+      <span>Not a member? <%= link_to "Sign Up", new_user_path, style: "color: #D12943" %></span>
+
+      <% end %>
     </div>
+    <div class="col-md-4"></div>
+  </div>
 </div>
