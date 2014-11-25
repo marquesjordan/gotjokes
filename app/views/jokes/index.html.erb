@@ -1,13 +1,33 @@
-<h1>List of Jokes</h1>
-<p>Below should show a list of Jokes Submited by users</p>
 
-<% @jokes.each do |j| %>
-	<div>
-		Video: <%= video_tag(j.video.url, size: "100x100") %><br>
-		Total Views: <%= j.views %><br>	
-		Total Votes: <%= j.totalvotes %><br>
-		<%= link_to 'Show', joke_path(j) %>
-		<%= link_to 'Destroy', j, method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="joke_index_container">
+	<div class="container">
+		<div class="row">		
 
+
+				<h1 id="index_title">List of Jokes</h1>
+
+				<% @jokes.each do |j| %>
+					<div class="thumbs">
+						<% if j.video_file_name %>
+							<br>
+							<%= video_tag(j.video.url, size: "200x190") %><br>
+						<% else %>
+								<div id="space"></div>
+								<% youtube_image_id = j.youtube.split("=").last %>
+	   					  <% img_src = "http://img.youtube.com/vi/#{youtube_image_id}/default.jpg" %>
+	   					  <!-- <div id="space"></div> -->
+								<%= image_tag(img_src, size: "200x130") %><br><br><br>
+						<% end %>
+
+
+						Total Views: <%= j.views %><br>	
+						Total Votes: <%= j.totalvotes %><br>
+						<%= link_to 'Show', joke_path(j) %>
+						<%= link_to 'Destroy', j, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+					</div>
+				<% end %> 
+
+		</div>				
 	</div>
-<% end %> 
+</div>

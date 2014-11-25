@@ -1,8 +1,6 @@
 Gotjokes::Application.routes.draw do
-
-
-resources :categories
-
+<<<<<<< HEAD
+  
 
   root 'application#index'
 
@@ -20,8 +18,16 @@ resources :categories
   get "jokes/:id/edit"  =>    'jokes#edit',     as: :edit_joke
   patch 'jokers/:id'     =>    'jokes#update'
   delete 'jokes/:id'    =>    'jokes#destroy',  as: :delete_joke
-  
-  
+=======
+
+resources :jokes
+resources :categories
+
+root 'jokes#index'
+
+
+
+>>>>>>> category
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   

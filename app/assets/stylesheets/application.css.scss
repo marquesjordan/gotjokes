@@ -1,6 +1,93 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body{
+	background-color: #F0F0F0;
+}
+
+// CSS FOR JOKE INDEX PAGE
+.joke_index_container{
+	width: 970px;
+	max-width: none !important;
+	margin: 0 auto;
+	background-color: white;
+}
+.thumbs{
+	float: left;
+	width: 240px;
+	text-align: center;
+	margin-top: 10px;
+}
+#index_title{
+	text-align: center;
+}
+#space{
+	margin-top: 45px;
+}
+
+// CSS SHOW PAGE
+#middle{
+	background-color: white;
+	border: 1px solid #F0F0F1;
+}
+
+#trend{
+	background-color: white;
+	border: 1px solid #F0F0F0;
+}
+#view{
+	color: red;
+	float: right;
+	margin-right: 15px;
+}
+#vote{
+	color: red;
+	float: left;
+	margin-left: 15px;
+}
+#details{
+	margin-left: 15px;	
+}
+#viewrow{
+	border-bottom: 1px solid #F0F0F0;
+
+}
+#uprow{
+	border-bottom: 1px solid #F0F0F0;
+	margin-bottom: 10px;
+}
+#commenttitle{
+	margin-left: 15px;
+}
+.comments{
+	background-color: #F0F0F0;
+}
+
+.funny{
+	float: left;
+	text-align: center;
+}
+
+.fon{
+
+	width: 300px;
+	max-width: none !important;
+}
+#words{
+	margin: 20px;
+}
+
+.showcontainer{
+	width: 970px;
+	max-width: none !important;
+}
+
+#bigvid{
+	  margin-left: auto;
+    margin-right: auto;
+    
+}
+
 .videos {
 	border: 1px solid red;
 	border-radius: 20px;
@@ -10,27 +97,53 @@
 	margin-top: 20px;
 }
 
+.side{
+	float: left;
+}
+.sidecontainer{
+	margin-bottom: 10px;
+}
+#recommend{
+	background-color: #F0F0F0;
+	border: 1px solid white;
+	text-align: center;
+}
+#recjoke{
+	margin: 0 auto;
+}
+
+#sidewords{
+	width: 130px;
+	margin-left: 10px;
+}
+
 .stylevideo{
 	
 }
-
-// Classes
 .center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
-
 #showVid {
 	border: 1px solid red;
 	border-radius: 20px;
 	background-color: black;
-	height: 400px;
+	height: 550px;
 }
-
-#commentbox{
-
+#commentlist{
+	border-top: 1px solid white;
+	margin-top: 10px;
+}
+.new_jokes_form{
+	width: 600px;
+	text-align: center;
+	color: white;
+	background-color: #404668;
+	border-radius: 20px;
+}
+#inner_joke_form{
+	width: 500px;
 }
 
 // START NAV-BAR STYLE

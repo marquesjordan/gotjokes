@@ -1,11 +1,41 @@
-<h1>Add A New Joke</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-2"></div>
+		<div class="col-xs-8">
+			<div class="new_jokes_form">
+				<div class="row">
+					<div class="col-xs-1"></div>
+					<div class="col-xs-10">
+						<div id="inner_joke_form">
+							<h1>Add A New Joke</h1>
+						
+							<div>
+								<%= form_for @joke, :url => {:action => :create}  do |f| %>
 
-<div>
-	<%= form_for @joke, :url => {:action => :create}  do |f| %>
-		<div><%= f.file_field :video %></div><br>
-		<div>Views: <%= f.text_field :views %></div><br>
-		<div>Votes: <%= f.text_field :totalvotes%></div><br>
-		<div><%= f.submit %>
+									<div>
+										<p class="lead">Upload a video<p>
+										<%= f.file_field :video, class: "form-control" %>
+									</div><br>
+										<p class="lead">OR</p>
+									<div>
+										<p class="lead">Paste YouTube link</p>
+										<%= f.text_field :youtube, class: "form-control", placeholder: "e.g. https://www.youtube.com/watch?v=0UjsXo9l6I8" %>
+									</div><br>
+									<div>
+										<p class="lead">Describe The Video</p>
+										Views: <%= f.text_area :description, class: "form-control" %>
+									</div><br>
+								
+									<div><%= submit_tag("Post New Joke", class: "btn btn-danger") %></div>
 
-	<% end %> 
+								<% end %> 
+							</div>
+						</div>
+					<div class="col-xs-1"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-2"></div>
+	</div>
 </div>

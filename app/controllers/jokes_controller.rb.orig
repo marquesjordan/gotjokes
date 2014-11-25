@@ -24,16 +24,15 @@ class JokesController < ApplicationController
     @joke = Joke.find(params[:id])
     @joke.views += 1
     @joke.save
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4d0a8c0f8477f22e04695d731192326e5aa74dab
     @trendingjokes = Joke.all
     @joke.user_comments.build
 
     @usercomment = UserComment.new
     @jokecomments = UserComment.where(joke_id: @joke.id)
-
-    @votes = Vote.where(joke_id: @joke.id)
-    @likes = Vote.where(joke_id: @joke.id).where(vote: 1)
-    @dislikes = Vote.where(joke_id: @joke.id).where(vote: -1)
-
   end
 
   def update
@@ -55,6 +54,6 @@ class JokesController < ApplicationController
   private
 
   	def joke_params
-      params.require(:joke).permit(:views, :totalvotes, :video, :youtube, :description, :user_id, :user_comments => [:description])
+      params.require(:joke).permit(:views, :totalvotes, :video, :user_id, :user_comments => [:description])
   	end
 end

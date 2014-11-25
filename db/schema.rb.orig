@@ -11,18 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141123211521) do
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20141119185713) do
+=======
+ActiveRecord::Schema.define(version: 20141120231820) do
+>>>>>>> category
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories", force: true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
+<<<<<<< HEAD
   create_table "jokes", force: true do |t|
     t.integer  "views",              default: 0
     t.integer  "totalvotes",         default: 0
@@ -32,10 +30,6 @@ ActiveRecord::Schema.define(version: 20141123211521) do
     t.string   "video_content_type"
     t.integer  "video_file_size"
     t.datetime "video_updated_at"
-    t.integer  "user_id"
-    t.integer  "category_id"
-    t.string   "youtube"
-    t.string   "description"
   end
 
   create_table "profiles", force: true do |t|
@@ -46,7 +40,6 @@ ActiveRecord::Schema.define(version: 20141123211521) do
     t.string   "bio"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
   end
 
   create_table "user_comments", force: true do |t|
@@ -54,7 +47,6 @@ ActiveRecord::Schema.define(version: 20141123211521) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "joke_id"
-    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|
@@ -68,8 +60,20 @@ ActiveRecord::Schema.define(version: 20141123211521) do
     t.integer  "vote"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
-    t.integer  "joke_id"
+=======
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "jokes", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "category_id"
+>>>>>>> category
   end
 
 end

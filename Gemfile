@@ -14,8 +14,6 @@ gem 'pg'
 #Add factory girl
 gem 'factory_girl_rails'
 
-
-
 group :development, :test do
 # TESTING rspec
   gem 'rspec-rails'
@@ -32,6 +30,7 @@ group :production do
 end
 
 gem "paperclip", "~> 4.2"
+gem "paperclip-ffmpeg"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
@@ -47,7 +46,7 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'bcrypt', '~> 3.1.7'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-
+gem 'aws-sdk', '~> 1.20.0'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
 

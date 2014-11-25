@@ -11,12 +11,20 @@ class VotesController < ApplicationController
 
   def new
     @vote = Vote.new
+    # raise params.inspect
+    @uservote = params[:vote]
+    @user_id = params[:user_id]
+    @joke_id = params[:joke_id]
+    Vote.create(vote: @uservote, user_id: @user_id, joke_id: @joke_id)
+    redirect_to joke_path(@joke_id)
   end
 
   def create 
-    @vote = Vote.new(vote_params)
+    # @vote = Vote.new(vote_params)
+    # @user = current_user
+    # @vote.user_id = @user.id
     if @vote.save
-      redirect_to votes_path
+      redirect_to joke_path(@joke_id)
     else
       render 'new'
     end
@@ -24,8 +32,7 @@ class VotesController < ApplicationController
 
   private
   def vote_params
-    params.require(:vote).permit(
-      :vote)
+    params.require(:vote).permit(:vote, :user_id, :joke_id)
   end
 
 end
