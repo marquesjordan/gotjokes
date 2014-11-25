@@ -43,8 +43,7 @@ end
 
 private
 	def profile_params
-		params.require(:profile).permit(
-			:name, :videos, :image, :location, :bio, profile_ids: [])
+		params.require(:profile).permit(:name, :videos, :image, :location, :bio, :user_id)
 	end
 
 
