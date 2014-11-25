@@ -3,13 +3,13 @@
     <div class="container-fluid">
       <div class="navbarwidth">
       <div class="navbar-header navbar-brand" >
-        <%= link_to image_tag("logo1.png"), root_path, method: :get %>
+        <%= link_to image_tag("logo1.png"), jokes_path, method: :get %>
       </div>
       <div class="navbar-header">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Jokes", root_path %></li>
-            <li><%= link_to "Other", root_path %></li>
+            <li><%= link_to "Jokes", jokes_path %></li>
+            <li><%= link_to "New", new_jokes_path %></li>
           </ul>
         </div>
       </div>
