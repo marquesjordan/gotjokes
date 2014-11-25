@@ -14,12 +14,14 @@ body{
 	background-color: black;
 	width:200px;
 	float: left;
+	margin: 0 auto;
 }
 
 .whole-right{
 	background-color: black;
 	width:200px;
 	float: right;
+	margin: 0 auto;
 }
 
 
@@ -78,6 +80,18 @@ div.img-right img {
 }
 #space{
 	margin-top: 45px;
+}
+
+h2{
+	font-size: 24px;
+	color:teal;
+	display: inline;
+}
+
+h3{
+	font-size: 24px;
+	color:black;
+	display: inline;
 }
 
 // CSS SHOW PAGE
