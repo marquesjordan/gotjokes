@@ -5,6 +5,26 @@ body{
 	background-color: #F0F0F0;
 }
 
+// CSS FOR JOKE INDEX PAGE
+.joke_index_container{
+	width: 970px;
+	max-width: none !important;
+	margin: 0 auto;
+	background-color: white;
+}
+.thumbs{
+	float: left;
+	width: 240px;
+	text-align: center;
+	margin-top: 10px;
+}
+#index_title{
+	text-align: center;
+}
+#space{
+	margin-top: 45px;
+}
+
 // CSS SHOW PAGE
 #middle{
 	background-color: white;
@@ -100,27 +120,21 @@ body{
 .stylevideo{
 	
 }
-
-// Classes
 .center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
-
 #showVid {
 	border: 1px solid red;
 	border-radius: 20px;
 	background-color: black;
 	height: 550px;
 }
-
 #commentlist{
 	border-top: 1px solid white;
 	margin-top: 10px;
 }
-
 .new_jokes_form{
 	width: 600px;
 	text-align: center;
