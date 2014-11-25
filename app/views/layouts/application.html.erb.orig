@@ -14,7 +14,11 @@
 <body ng-app="myApp">
   
   <%= render 'layouts/form' %>
+<<<<<<< HEAD
+
+=======
       
+>>>>>>> json
   <%= yield %>
 
 </body>
