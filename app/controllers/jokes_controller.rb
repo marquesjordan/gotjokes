@@ -30,7 +30,12 @@ class JokesController < ApplicationController
     u = User.where(id: @joke.user_id).first
     @username = u.username
 
+    v = Vote.where(joke_id: @joke.id).length
+    if v == 0
+      Vote.create(user_id: @joke.user_id, vote: 1, joke_id: @joke.id )
+    end
     @voted = Vote.where(user_id: current_user.id).last
+    
 
     @usercomment = UserComment.new
     @jokecomments = UserComment.where(joke_id: @joke.id)
