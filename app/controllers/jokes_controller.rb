@@ -27,6 +27,11 @@ class JokesController < ApplicationController
     @trendingjokes = Joke.all
     @joke.user_comments.build
 
+    u = User.where(id: @joke.user_id).first
+    @username = u.username
+
+    @voted = Vote.where(user_id: current_user.id).last
+
     @usercomment = UserComment.new
     @jokecomments = UserComment.where(joke_id: @joke.id)
 

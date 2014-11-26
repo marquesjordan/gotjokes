@@ -6,9 +6,18 @@ class ProfilesController < ApplicationController
 
 	def show
 		@profile = Profile.find(params[:id])
+		# @profile = Profile.where(user_id: params[:id]).first
+		
+
+		@user_id = @profile.user_id
+		@myjokes = Joke.where(user_id: @user_id)
+		@likes = Vote.where(user_id: @user_id).where(vote: 1)
+		@dislikes = Vote.where(user_id: @user_id).where(vote: -1)
 	end
 
-    def new
+
+
+   def new
 		@profile = Profile.new
 	end
 
@@ -43,7 +52,7 @@ end
 
 private
 	def profile_params
-		params.require(:profile).permit(:name, :videos, :image, :location, :bio, :user_id)
+		params.require(:profile).permit(:name, :videos, :avatar, :image, :location, :bio, :user_id)
 	end
 
 

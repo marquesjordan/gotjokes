@@ -11,6 +11,8 @@
       <% end %>
 
       <%= form_for @user do |f| %>
+        <%= f.text_field :username, placeholder: "username", :class => "form-control"%>
+        <br>
         <%= f.text_field :email, placeholder: "email", :class => "form-control"%>
         <br>
         <%= f.password_field :password, placeholder: "password", :class => "form-control" %>
