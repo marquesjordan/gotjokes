@@ -4,6 +4,57 @@
 body{
 	background-color: #F0F0F0;
 }
+// CSS FOR PROFILE
+.profile_container{
+	width: 970px;
+	height: 300px;
+	max-width: none !important;
+	margin: 0 auto;
+	background-color: #65C5FF;
+	border-radius: 25px;
+	border: 3px solid white;
+	text-align: left;
+}
+
+.profile_update_container{
+	width: 970px;
+	height: 500px;
+	max-width: none !important;
+	margin: 0 auto;
+	background-color: #65C5FF;
+	border-radius: 25px;
+	border: 3px solid white;
+	text-align: left;
+}
+
+.box{
+
+	width: 600px;
+	margin: 0 auto;
+	
+}
+.info{
+	float: left;
+
+}
+#pic{
+	width: 200px;
+	height: 200px;
+	overflow:hidden;
+}
+
+#words{
+	width: 360px;
+	height: 200px;
+}
+
+.avatar{
+	margin-top: 25px;
+	width: 100px;
+	height: 100px;
+	background-color: grey;
+	// margin: 0 auto;
+}
 
 // CSS FOR JOKE INDEX PAGE
 .whole{
@@ -113,6 +164,9 @@ h3{
 	color: red;
 	float: left;
 	margin-left: 15px;
+}
+.voted{
+	color: red;
 }
 #details{
 	margin-left: 15px;	

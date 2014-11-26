@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
 	has_many :jokes
 	has_many :user_comments
 	has_many :votes
-    validates_uniqueness_of :email
+  validates_uniqueness_of :email
 
 end
