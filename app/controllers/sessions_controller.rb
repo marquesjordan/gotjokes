@@ -12,7 +12,8 @@ class SessionsController < ApplicationController
             session[:user_id] = user.id
             redirect_to root_path(:user_id), notice: "Logged in!"
         else
-            redirect_to new_session_path, notice: 'Invalid, Check form and try again'
+            
+            redirect_to new_session_path, notice: "Invalid, Check form and try again"
             # redirect_to new_session_path
         end
     end

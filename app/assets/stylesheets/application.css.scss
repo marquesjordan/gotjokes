@@ -11,17 +11,19 @@ body{
 }
 
 .whole-left{
-	background-color: black;
+	background-color: #222222;
 	width:200px;
 	float: left;
 	margin: 0 auto;
+	margin-top: -22px;
 }
 
 .whole-right{
-	background-color: black;
+	background-color: #222222;
 	width:200px;
 	float: right;
 	margin: 0 auto;
+	margin-top: -22px;
 }
 
 
@@ -260,4 +262,38 @@ h3{
   -webkit-user-select: none;
 }
 // END NAV-BAR LOGO STYLE
+
+// SIGN-UP PAGE
+#error_explanation {
+  width: 355px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 20px;
+    margin: 65px;
+    margin-bottom: 0px;
+    // background-color: #c00;
+    color: red;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
   
