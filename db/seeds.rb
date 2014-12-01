@@ -16,3 +16,11 @@ profiles = Profile.create([
 usercomments = UserComment.create([{
   description: "your joke was funny"
   }])  
+
+categories = Category.create([
+{name: "Clean & Corny", description: "Nice clean jokes"},
+{name: "Dark & Dirty", description: "Not for the fainted-hearted"},
+{name: "Child's Play", description: "Kid-friendly"},
+{name: "PG-13", description: "age 13 yrs or older recommended"},
+{name: "Rated-R", description: "age 17 yrs or older recommended"},
+])

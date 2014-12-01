@@ -358,6 +358,9 @@ h3{
   display: table;
 }
 
+<<<<<<< HEAD
+
+=======
 //homepage
 
 #h_videoofday {
@@ -616,4 +619,5 @@ h3{
         margin-right: 0;
     }
 }
+>>>>>>> b262699f439889778c1d127c78e4b6a104e19d45
   
