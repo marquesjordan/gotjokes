@@ -4,7 +4,7 @@ Gotjokes::Application.routes.draw do
 resources :categories
 
 
-  root 'application#index'
+  root 'jokes#home'
   
 
 
