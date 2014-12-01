@@ -6,14 +6,31 @@
 
 
       <%= image_tag("signup1.png")%>
-      <% if flash[:notice] %>
-        <div class="alert alert-danger"><%= flash[:notice] %></div>
-      <% end %>
+       
 
       <%= form_for @user do |f| %>
+      
+        <% if @user.errors.any? %>
+          <div id="error_explanation">
+            <h2>FORM IS INVALID</h2>
+            <br>
+            <ul>
+              <% @user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+           <% end %>
+          
+      
+
+        <%= f.text_field :username, placeholder: "username", :class => "form-control"%>
+        <br>
+
         <%= f.text_field :email, placeholder: "email", :class => "form-control"%>
         <br>
         <%= f.password_field :password, placeholder: "password", :class => "form-control" %>
+        <br>
         <%= f.password_field :password_confirmation, placeholder: "confirm password", :class => "form-control" %>
 
       
@@ -24,3 +41,4 @@
   </div>
 </div>
 <!-- end of new users -->
+

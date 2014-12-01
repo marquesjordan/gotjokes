@@ -11,28 +11,24 @@
     </div>
   <% end %>
 
+ 
+  <%= f.file_field :avatar, class: "form-control" %>
+ 
+
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :videos %><br>
-    <%= f.text_field :videos %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_field :image %>
+    <%= f.text_field :name, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :location %><br>
-    <%= f.text_field :location %>
+    <%= f.text_field :location, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :bio %><br>
-    <%= f.text_field :bio %>
-  </div>
+    <%= f.text_area :bio, class: "form-control" %>
+  </div><br>
   <div class="actions">
-    <%= f.submit %>
+    <%= submit_tag("Update Profile", class: "btn btn-primary") %>
   </div>
 <% end %>
 

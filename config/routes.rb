@@ -5,6 +5,7 @@ Gotjokes::Application.routes.draw do
 
 
   root 'application#index'
+  
 
 
   get 'signup', to: 'users#new', as: 'signup'
@@ -34,8 +35,6 @@ Gotjokes::Application.routes.draw do
   resources :sessions
   
   resources :users 
-  
-  resources :profiles
 
   resources :votes
 
@@ -46,6 +45,15 @@ Gotjokes::Application.routes.draw do
   get "user_comments/:id/edit"  =>    'user_comments#edit',     as: :edit_user_comment
   patch 'user_comments/:id'     =>    'user_comments#update'
   delete 'user_comments/:id'    =>    'user_comments#destroy',  as: :delete_user_comment
+
+  get 'profiles/index'     =>    'profiles#index',    as: :profiles
+  get 'profiles/new'       =>    'profiles#new',      as: :new_profiles
+  get "profiles/:id"       =>    'profiles#show',     as: :profile
+  get 'profiles/:user_id'  =>    'profiles#get_profile', as: :get_profile
+  post 'profiles/create'   =>    'profiles#create',   as: :create_profile
+  get "profiles/:id/edit"  =>    'profiles#edit',     as: :edit_profile
+  patch 'profiles/:id'     =>    'profiles#update'
+  delete 'profiles/:id'    =>    'profiles#destroy',  as: :delete_profile
 
   get 'searches/index' => 'searches#index', as: :searches
 

@@ -1,29 +1,65 @@
 
+<div class="profile_container">
+  <div class="box">
 
-<p>
-  <strong>Name:</strong>
-  <%= @profile.name %>
-</p>
+    <div class="info" id="pic">
+      <% if @profile.avatar_file_name %>
+        <div class="avatar">
+          <%= image_tag @profile.avatar.url(:thumb) %>
+        </div>
+      <% else %>
+        <div class="avatar">
+          <%= image_tag('missing.png', size: "100x100") %>
+        </div>
+      <% end %>
+    </div>
+    <div class="info" id="words">
+      <p class="lead">
+        <strong>Username:</strong>
+        <%= @profile.name %>
+      </p>
 
-<p>
-  <strong>Videos:</strong>
-  <%= @profile.videos %>
-</p>
+      <p class="lead">
+        <strong>Location:</strong>
+        <%= @profile.location %>
+      </p>
+      <p class="lead">
+        <strong>Biography:</strong>
+        <%= @profile.bio %>
+      </p>
+    </div>
+    <%= link_to 'Edit Profile', edit_profile_path(@profile) %> |
+    <%= link_to 'Back', jokes_path %>
+  </div>
+</div>
+<div class="joke_index_container">
+  <div class="container">
+    <div class="row">   
 
-<p>
-  <strong>Images:</strong>
-  <%= @profile.image %>
-</p>
-  <strong>Location:</strong>
-  <%= @profile.location %>
-</p>
-  <strong>Biography:</strong>
-  <%= @profile.bio %>
-</p>
+
+        <h1 id="index_title">Jokes <%= @profile.name %> Posted</h1>
+
+        <% @myjokes.each do |j| %>
+          <div class="thumbs">
+            <% if j.video_file_name %>
+              <br>
+              <%= video_tag(j.video.url, size: "200x190") %><br>
+            <% else %>
+                <div id="space"></div>
+                <% youtube_image_id = j.youtube.split("=").last %>
+                <% img_src = "http://img.youtube.com/vi/#{youtube_image_id}/default.jpg" %>
+                <!-- <div id="space"></div> -->
+                <%= image_tag(img_src, size: "200x130") %><br><br><br>
+            <% end %>
 
 
+            Total Views: <%= j.views %><br> 
+            Total Votes: <%= j.totalvotes %><br>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+          </div>
+        <% end %> 
 
+    </div>        
+  </div>
+</div>
      
