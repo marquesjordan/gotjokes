@@ -64,6 +64,7 @@ body{
 .whole-left{
 	background-color: #222222;
 	width:200px;
+  height: 1000px;
 	float: left;
 	margin: 0 auto;
 	margin-top: -22px;
@@ -72,6 +73,7 @@ body{
 .whole-right{
 	background-color: #222222;
 	width:200px;
+  height: 1000px;
 	float: right;
 	margin: 0 auto;
 	margin-top: -22px;
@@ -272,6 +274,11 @@ h3{
 }
 
 // START NAV-BAR STYLE
+.navbar2 {
+  position: relative;
+  min-height: 50px;
+  border: 1px solid transparent;
+}
 .navbar-brand {
   float: left;
   padding: 8px 15px;

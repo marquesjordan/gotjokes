@@ -8,17 +8,29 @@
   </div>
 </div>
 <!-- end of blackened sidebars -->
+
+<b><%#= @filterLabel.html_safe %></b>
+<br>
+<br>
+
 <div class="joke_index_container">
   <div class="container">
     <div class="row">   
+      <h1 id="index_title"><%#= @filterLabel.html_safe %></h1>
+      <form>
+        FILTER BY: <br><br>
+        JOKE: <input type = "text" name="jokeFilter">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+      <br><br>
+        <% @jokeData.each do |j| %>
+          <%= j.description %>
+        <% end %>
 
-<div class = "thumbs" ng-repeat="oneYoutube in videos" >
-  <h6>{{ oneYoutube.id.videoId }}</h6><br>
-  {{getIframeSrc(oneYoutube.id.videoId)}}
-  <iframe src='{{youtube_url}}' width="200" height="200" ></iframe>
-</div>
 
- <!--  <%# @jokeData.each do |j| %>
+      <!--  <%# @jokeData.each do |j| %>
         <div class="thumbs">
           <%# if j.video_file_name %>
             <br>
@@ -37,11 +49,6 @@
           
         </div>
       <%# end %>  -->
-
-<br>
-    </div>
+    </div>        
   </div>
 </div>
-<script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
-
-

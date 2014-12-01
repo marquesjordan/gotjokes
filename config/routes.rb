@@ -1,7 +1,7 @@
 Gotjokes::Application.routes.draw do
 
 
-resources :categories
+  resources :categories
 
 
   root 'jokes#home'
@@ -13,13 +13,18 @@ resources :categories
   post 'login', to: 'sessions#create', as: 'createlogin'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
- 
+  # additional joke routes for json and sql searches
+  get  'jokes/search'   => 'jokes#search', as: :jokes_search  
+  post 'jokes/search'   => 'jokes#search', as: :jokes_searchfilter 
+  get 'jokes/welcome'   => 'jokes#jokeofday', as: :welcome_jokes   
+
+  # default joke routes
   get 'jokes/index'     =>    'jokes#index',    as: :jokes
   get 'jokes/new'       =>    'jokes#new',      as: :new_jokes
   get "jokes/:id"       =>    'jokes#show',     as: :joke
   post 'jokes/create'   =>    'jokes#create' 
   get "jokes/:id/edit"  =>    'jokes#edit',     as: :edit_joke
-  patch 'jokers/:id'     =>    'jokes#update'
+  patch 'jokers/:id'    =>    'jokes#update'
   delete 'jokes/:id'    =>    'jokes#destroy',  as: :delete_joke
   
   
@@ -49,6 +54,8 @@ resources :categories
   get "profiles/:id/edit"  =>    'profiles#edit',     as: :edit_profile
   patch 'profiles/:id'     =>    'profiles#update'
   delete 'profiles/:id'    =>    'profiles#destroy',  as: :delete_profile
+
+  get 'searches/index' => 'searches#index', as: :searches
 
 
 end
