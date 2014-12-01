@@ -5,6 +5,7 @@ resources :categories
 
 
   root 'application#index'
+  
 
 
   get 'signup', to: 'users#new', as: 'signup'
