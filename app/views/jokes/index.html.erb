@@ -1,42 +1,38 @@
 
 <div class="whole">
   <div class="whole-left">
-	<div class="img-left">
-	  <a target="_blank" href="">
-	    <img src="http://moatsearch-data.s3.amazonaws.com/creative_thumbs/70/12/b0/7012b0588b4b20851313c37cd4025062_thumb.jpg" alt="Klematis" width="150" height="400">
-	    <br>
-	    <br>
-	    <br>
-	    <br>
-	    <br>
-	    <br>
-	    <img src="http://moatsearch-data.s3.amazonaws.com/creative_thumbs/fc/7c/db/fc7cdbfa512134fddc072f2514179cc8_thumb.jpg" alt="Klematis" width="150" height="400">
-	  </a>	
-	</div>
+		<div class="img-left">
+		  <a target="_blank" href="">
+		    <img src="http://moatsearch-data.s3.amazonaws.com/creative_thumbs/70/12/b0/7012b0588b4b20851313c37cd4025062_thumb.jpg" alt="Klematis" width="150" height="400">
+		    <br>
+		    <br>
+		    <br>
+		    <br>
+		    <br>
+		    <br>
+		    <img src="http://moatsearch-data.s3.amazonaws.com/creative_thumbs/fc/7c/db/fc7cdbfa512134fddc072f2514179cc8_thumb.jpg" alt="Klematis" width="150" height="400">
+		  </a>	
+		</div>
   </div>
-  <div class="whole-right">
-	<div class="img-right">
-	  <a target="_blank" href="">
-	   <img src="http://moatsearch-data.s3.amazonaws.com/creative_thumbs/21/1d/fe/211dfe954c2803f4ece91f081aefb97d_thumb.jpg" alt="Klematis" width="150" height="150">
-	    <br>
-	    <br>
-	    <br>
-	    <br>
-	    <img src="http://moatsearch-data.s3.amazonaws.com/creative_thumbs/5acd03eb68b94b62fdcf2932b4af5abcebc9b6a7.png" alt="Klematis" width="150" height="500">
-	    <br>
-	    <br>
-	    <br>
-	  
-	    
-	    <img src="http://moatsearch-data.s3.amazonaws.com/creative_thumbs/ef/82/ff/ef82ff2e6b45aff13888f0524da88284_thumb.jpg" alt="Klematis" width="150" height="150">
-	  </a>
-	</div>
-  </div>	
-<div class="joke_index_container">
-	<div class="container">
-		<div class="row">		
-
-
+	<div class="whole-right">
+		<div class="img-right">
+		  <a target="_blank" href="">
+		   <img src="http://moatsearch-data.s3.amazonaws.com/creative_thumbs/21/1d/fe/211dfe954c2803f4ece91f081aefb97d_thumb.jpg" alt="Klematis" width="150" height="150">
+		    <br>
+		    <br>
+		    <br>
+		    <br>
+		    <img src="http://moatsearch-data.s3.amazonaws.com/creative_thumbs/5acd03eb68b94b62fdcf2932b4af5abcebc9b6a7.png" alt="Klematis" width="150" height="500">
+		    <br>
+		    <br>
+		    <br>
+		    <img src="http://moatsearch-data.s3.amazonaws.com/creative_thumbs/ef/82/ff/ef82ff2e6b45aff13888f0524da88284_thumb.jpg" alt="Klematis" width="150" height="150">
+		  </a>
+		</div>
+	</div>	
+	<div class="joke_index_container">
+		<div class="container">
+			<div class="row">		
 				<h1 id="index_title">Wanna Laugh? Just a click away!</h1>
 
 				<% @jokes.each do |j| %>
@@ -44,7 +40,6 @@
 						<% if j.video_file_name %>
 							<br>
 							<%= link_to video_tag(j.video.url, size: "200x190"), joke_path(j) %>
-							
 						<% else %>
 								<div id="space"></div>
 								<% youtube_image_id = j.youtube.split("=").last %>
@@ -52,17 +47,13 @@
 	   					  <!-- <div id="space"></div> -->
 								<%= link_to image_tag(img_src, size: "200x130"), joke_path(j) %><br><br><br>
 						<% end %>
-
-
 						<h2>Views:</h2> <h3><%= j.views %></h3><br>	
-						<h2>Votes:</h2> <h3><%= j.totalvotes %></h3><br>
-						
-						
-
+						<h2>Votes:</h2> <h3><%= j.totalvotes %></h3><br>	
 					</div>
 				<% end %> 
 
-		</div>				
+			</div>				
+		</div>
 	</div>
 </div>
 

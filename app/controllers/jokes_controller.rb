@@ -5,7 +5,6 @@ class JokesController < ApplicationController
 
   def new
   	@joke = Joke.new
-
   end
 
   def create
@@ -52,8 +51,47 @@ class JokesController < ApplicationController
     redirect_to jokes_path
   end
 
-  private
+  # only used to setup the api
+  def jokeofday
+    render json: Joke.first, status: 200
+  end
 
+  #======== SQL SEARCH START ===================================================================
+  def search
+    # SET JOKEWHERE VARIABLES TO PARAMETER VALUES
+    # IF PARAMETER IS NIL SET IT TO EMPTY STRING
+    if params[:jokeFilter] == nil
+      jokeWhere = ''
+    else
+      jokeWhere = params[:jokeFilter]
+    end 
+
+    # CREATE A LABEL FOR THE FORM SHOWING THE USER WHAT IS BEING SHOWN
+    if jokeWhere == ''
+      @filterLabel = 'Showing all jokes'
+    else
+      @filterLabel = 'Results filtered by jokes who\'s '
+      if jokeWhere != ''
+        @filterLabel = @filterLabel + 'description matches: '+ '"' + jokeWhere + '" '
+      end
+    end
+
+    # SET DEFAULT WHERE CLAUSE FILTERS IF THERE ARE NONE
+    if jokeWhere === ''
+      jokeWhere = '%%'
+    end 
+
+    # EXECUTE THE QUERY USING SQL
+    @jokeData = Joke.find_by_sql([ 
+      'SELECT id, views, totalvotes, video_file_name, video_content_type, video_file_size, video_updated_at, category_id, user_id, youtube, description ' +  
+      'FROM jokes ' +
+      'WHERE UPPER(description) LIKE UPPER(?) ' +
+      'ORDER BY description ', "%#{jokeWhere}%"])
+  end 
+  #======== SQL SEARCH END ===================================================================
+
+  private
+    # Never trust parameters from the scary internet, only allow the white list through.
   	def joke_params
       params.require(:joke).permit(:views, :totalvotes, :video, :youtube, :description, :user_id, :user_comments => [:description])
   	end

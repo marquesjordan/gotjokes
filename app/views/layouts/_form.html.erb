@@ -1,5 +1,5 @@
 <!-- start of nav bar -->
-  <nav class="navbar navbar-inverse" role="navigation">
+  <nav class="navbar2 navbar-inverse" role="navigation">
     <div class="container-fluid">
       <div class="navbarwidth">
         <div class="navbar-header navbar-brand" >
@@ -13,12 +13,20 @@
             </ul>
           </div>
         </div>
+
+
+      <!-- START OF SEARCH FUNCTIONS -->
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
-            <input type="text" class="form-control2" placeholder="Search">
+            <input type="text" name="jokeFilter"class="form-control2" placeholder="Search">
           </div>
-          <button type="submit" class="btn2 btn-default">Submit</button>
+          <input ng-model="query" type="text" placeholder="Search" >
+            <a class="btn btn-default" ui-sref="home({param: query})">SEARCH YOUTUBE</a>
+          <%= link_to "Submit", jokes_searchfilter_path, :class => "btn2 btn-default"  %>
         </form>
+
+
+
         <div class="navbar-text navbar-right">
           <div class="marginRight">
             <% if current_user %>
