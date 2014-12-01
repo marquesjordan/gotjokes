@@ -1,0 +1,623 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+	background-color: #F0F0F0;
+}
+// CSS FOR PROFILE
+.profile_container{
+	width: 970px;
+	height: 300px;
+	max-width: none !important;
+	margin: 0 auto;
+	background-color: #65C5FF;
+	border-radius: 25px;
+	border: 3px solid white;
+	text-align: left;
+}
+
+.profile_update_container{
+	width: 970px;
+	height: 500px;
+	max-width: none !important;
+	margin: 0 auto;
+	background-color: #65C5FF;
+	border-radius: 25px;
+	border: 3px solid white;
+	text-align: left;
+}
+
+.box{
+
+	width: 600px;
+	margin: 0 auto;
+	
+}
+.info{
+	float: left;
+
+}
+#pic{
+	width: 200px;
+	height: 200px;
+	overflow:hidden;
+}
+
+#words{
+	width: 360px;
+	height: 200px;
+}
+
+.avatar{
+	margin-top: 25px;
+	width: 100px;
+	height: 100px;
+	background-color: grey;
+	// margin: 0 auto;
+}
+
+nav {
+	margin-bottom: -20px;
+}
+
+// CSS FOR JOKE INDEX PAGE
+.whole{
+	background-color: #F0F0F0;
+}
+
+.whole-left{
+	background-color: #222222;
+	width:200px;
+	float: left;
+	margin: 0 auto;
+	margin-top: -22px;
+}
+
+.whole-right{
+	background-color: #222222;
+	width:200px;
+	float: right;
+	margin: 0 auto;
+	margin-top: -22px;
+}
+
+
+div.img-left {
+    margin: 0 auto;
+    padding-left: 17px;
+    padding-top: 20px;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+}
+
+div.img-left img {
+    display: inline;
+    margin: 5px;
+    // border: 1px solid #ffffff;
+}
+
+div.img-right {
+    margin: 0 auto;
+    padding-right: 17px;
+    padding-top: 15px;
+    height: auto;
+    width: auto;
+    float: right;
+    text-align: center;
+}
+
+div.img-right img {
+    display: inline;
+    margin: 5px;
+    // border: 1px solid #ffffff;
+}
+
+
+
+
+.joke_index_container{
+	width: 970px;
+	max-width: none !important;
+	margin: 0 auto;
+	background-color: #F0F0F0;
+}
+.thumbs{
+	float: left;
+	width: 240px;
+	text-align: center;
+	margin-top: 10px;
+}
+#index_title{
+	text-align: center;
+	color: red;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 48px;
+}
+#space{
+	margin-top: 45px;
+}
+
+h2{
+	font-size: 24px;
+	color:teal;
+	display: inline;
+}
+
+h3{
+	font-size: 24px;
+	color:black;
+	display: inline;
+}
+
+// CSS SHOW PAGE
+#middle{
+	background-color: white;
+	border: 1px solid #F0F0F1;
+}
+
+#trend{
+	background-color: white;
+	border: 1px solid #F0F0F0;
+}
+#view{
+	color: red;
+	float: right;
+	margin-right: 15px;
+}
+#vote{
+	color: red;
+	float: left;
+	margin-left: 15px;
+}
+.voted{
+	color: red;
+}
+#details{
+	margin-left: 15px;	
+}
+#viewrow{
+	border-bottom: 1px solid #F0F0F0;
+
+}
+#uprow{
+	border-bottom: 1px solid #F0F0F0;
+	margin-bottom: 10px;
+}
+#commenttitle{
+	margin-left: 15px;
+}
+.comments{
+	background-color: #F0F0F0;
+}
+
+.funny{
+	float: left;
+	text-align: center;
+}
+
+.fon{
+
+	width: 300px;
+	max-width: none !important;
+}
+#words{
+	margin: 20px;
+}
+
+.showcontainer{
+	width: 970px;
+	max-width: none !important;
+}
+
+#bigvid{
+	  margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.videos {
+	border: 1px solid red;
+	border-radius: 20px;
+}
+
+.video-js{
+	margin-top: 20px;
+}
+
+.side{
+	float: left;
+}
+.sidecontainer{
+	margin-bottom: 10px;
+}
+#recommend{
+	background-color: #F0F0F0;
+	border: 1px solid white;
+	text-align: center;
+}
+#recjoke{
+	margin: 0 auto;
+}
+
+#sidewords{
+	width: 130px;
+	margin-left: 10px;
+}
+
+.stylevideo{
+	
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#showVid {
+	border: 1px solid red;
+	border-radius: 20px;
+	background-color: black;
+	height: 550px;
+}
+#commentlist{
+	border-top: 1px solid white;
+	margin-top: 10px;
+}
+.new_jokes_form{
+	width: 600px;
+	text-align: center;
+	color: white;
+	background-color: #404668;
+	border-radius: 20px;
+}
+#inner_joke_form{
+	width: 500px;
+}
+
+// START NAV-BAR STYLE
+.navbar-brand {
+  float: left;
+  padding: 8px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 50px;
+}
+.navbarwidth {
+  width: 970px;
+  left: 0;
+  text-align: center;
+  margin: auto;
+}
+.form-control2 {
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  background-color: white;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 18px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.btn2 {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  border-radius: 10px;
+  -webkit-user-select: none;
+}
+// END NAV-BAR LOGO STYLE
+
+<<<<<<< HEAD
+
+//homepage
+
+#h_videoofday {
+    right: -715px;
+	position: absolute;
+	width: 800px;
+}
+
+#h_curtain {
+    height: 800px;
+    width: 900px;
+    left: 15px;
+    z-index: 15;
+    position: absolute;
+    
+
+}
+
+#h_shadowbox {
+	width: 900px;
+	height: 900px;
+	right: -738px;
+	z-index: 2;
+	position: absolute;
+
+}
+
+.h_shadow {
+	-moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+    overflow: auto;
+    position: absolute;
+    z-index: 1;
+}
+
+
+
+.under_vid {
+	position: relative;
+    left: 130px;
+    bottom: -480px;
+}
+
+.h_smallvidthumb {
+    height: 120px;
+    width: 180px;
+    z-index: 1;
+    overflow: visible;
+    margin-top: 20px;
+}
+
+.h_underheader {
+    margin-top: 60px;
+    position: absolute;
+    left: -100px;
+}
+
+.h_gotjokes {
+    z-index: 5;
+    position: absolute;
+    left: -50px;
+    margin-left: 140px;
+    margin-top: 20px;
+}
+
+.h_jester {
+	margin-left: 30px;
+	margin-top: 40px;
+}
+
+.h_container {
+	background-color: white;
+    padding:0;
+    margin:0;
+    overflow: auto;
+	position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.h_medvidthumb {
+    width: 250px;
+}
+
+.h_medvidthumbwhite {
+    width: 200px;
+}
+
+.h_thumbs {
+    position: relative;
+    right: -500px;
+    top: -70px;
+    
+}
+
+.h_viddescription {
+    position: relative;
+    left: 0px;
+}
+
+.h_h2 {
+    font-family: impact;
+    z-index: 20;
+    position: absolute;
+    right: 0px;
+    color: yellow;
+}
+
+.h_smalltag {
+    font-family: arial;
+    position: absolute;
+    top: 100px;
+    z-index: 19;
+    overflow: auto;
+
+}
+
+.h_smallertag {
+    position: relative;
+    left: 100px;
+}
+
+.h_h3 {
+    font-family: arial;
+    position: absolute;
+    top: 100px;
+    z-index: 19;
+   
+
+}
+
+.h_white {
+	color: white;
+}
+
+
+.h_wrapper {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    background-color: #101010;
+    width: 100%;
+    position: absolute;
+    bottom: -580px;
+    padding-left: 50px;
+    z-index: 14;
+}
+
+.h_wrapperwhite {
+	background-color: white;
+	margin-top: 10px;
+	position: absolute;
+	top: 1250px;
+	padding-top: 50px;
+	text-align: center;
+	
+	
+}
+
+.h_footer {
+	background-color: #101010;
+	width: 100%;
+	height: 50px;
+	position: absolute;
+
+}
+
+.h_footertext {
+	color: white;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.youtube {
+	height: 120px;
+	width: 120px;
+	padding-left: 0px;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: black;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+        background-color: black;
+        bottom: 0px;
+        position: absolute;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+
+
+
+=======
+// SIGN-UP PAGE
+#error_explanation {
+  width: 355px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 20px;
+    margin: 65px;
+    margin-bottom: 0px;
+    // background-color: #c00;
+    color: red;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+>>>>>>> master
+  

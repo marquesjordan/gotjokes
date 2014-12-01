@@ -4,7 +4,11 @@ Gotjokes::Application.routes.draw do
 resources :categories
 
 
-  root 'jokes#home'
+
+
+  root 'application#index'
+  
+
 
 
   get 'signup', to: 'users#new', as: 'signup'

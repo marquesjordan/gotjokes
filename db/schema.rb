@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 20141126210613) do
     t.string   "video_content_type"
     t.integer  "video_file_size"
     t.datetime "video_updated_at"
-    t.integer  "user_id"
     t.integer  "category_id"
+    t.integer  "user_id"
     t.string   "youtube"
     t.string   "description"
   end
