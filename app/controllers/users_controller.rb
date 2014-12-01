@@ -9,9 +9,14 @@ class UsersController < ApplicationController
 
     def create
         @user = User.new(user_params)
+
         respond_to do |format|
-          if @user.save
-            Profile.create(:user_id => @user.id)
+          # if @user.save
+          #   Profile.create(:user_id => @user.id)
+
+        if @user.save
+            Profile.create(:user_id => @user.id, :name => @user.username)
+
             session[:user_id] = @user.id
             format.html { redirect_to users_path, notice: 'User was successfully created.' }
             format.json { render action: 'show', status: :created, location: @user }
@@ -25,7 +30,7 @@ class UsersController < ApplicationController
 
     private
     def user_params
-        params.require(:user).permit(:email, :password, :password_confirmation)
+        params.require(:user).permit(:email, :username, :password, :password_confirmation)
     end
 
 

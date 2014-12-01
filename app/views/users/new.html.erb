@@ -9,6 +9,7 @@
        
 
       <%= form_for @user do |f| %>
+      
         <% if @user.errors.any? %>
           <div id="error_explanation">
             <h2>FORM IS INVALID</h2>
@@ -22,9 +23,14 @@
            <% end %>
           
       
+
+        <%= f.text_field :username, placeholder: "username", :class => "form-control"%>
+        <br>
+
         <%= f.text_field :email, placeholder: "email", :class => "form-control"%>
         <br>
         <%= f.password_field :password, placeholder: "password", :class => "form-control" %>
+        <br>
         <%= f.password_field :password_confirmation, placeholder: "confirm password", :class => "form-control" %>
 
       

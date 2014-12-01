@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 	has_many :jokes
 	has_many :user_comments
 	has_many :votes
-    validates_uniqueness_of :email
+  validates_uniqueness_of :email
 
     # transaltes any uppercase email characters to lower case
 	before_save { |user| user.email = user.email.downcase }
