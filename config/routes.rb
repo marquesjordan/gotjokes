@@ -4,7 +4,7 @@ Gotjokes::Application.routes.draw do
 resources :categories
 
 
-  root 'application#index'
+  root 'jokes#home'
 
 
   get 'signup', to: 'users#new', as: 'signup'
@@ -13,6 +13,7 @@ resources :categories
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
  
+  get 'jokes/home'     =>    'jokes#home'
   get 'jokes/index'     =>    'jokes#index',    as: :jokes
   get 'jokes/new'       =>    'jokes#new',      as: :new_jokes
   get "jokes/:id"       =>    'jokes#show',     as: :joke
