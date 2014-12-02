@@ -78,6 +78,7 @@ class JokesController < ApplicationController
     if params[:jokeFilter] == nil
       jokeWhere = ''
     else
+      # raise params.inspect
       jokeWhere = params[:jokeFilter]
     end 
 

@@ -3,11 +3,7 @@ Gotjokes::Application.routes.draw do
 
   resources :categories
 
-
-  root 'jokes#home'
-  get 'jokes/test' => 'jokes#test' 
-  
-
+  root 'application#index'  
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
@@ -17,8 +13,7 @@ Gotjokes::Application.routes.draw do
   # additional joke routes for json and sql searches
   get  'jokes/search'   => 'jokes#search', as: :jokes_search  
   post 'jokes/search'   => 'jokes#search', as: :jokes_searchfilter 
-  get 'jokes/json'   => 'jokes#jokeofday', as: :json_jokes 
-
+  get 'jokes/json'      => 'jokes#jokeofday', as: :json_jokes 
 
   # default joke routes
   get 'jokes/home'      =>    'jokes#home',    as: :home_jokes

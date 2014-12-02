@@ -13,9 +13,9 @@ angular.module('myApp', ['ui.router', 'templates'])
 
   // URL ADDRESSES FOR ANGULAR
   $stateProvider
-    .state('home', {
-      url: '/home/:param',
-      templateUrl: 'home.html',
+    .state('youtube', {
+      url: '/youtube/:param',
+      templateUrl: 'youtube.html',
       controller: 'searchCtrl'
     })
 

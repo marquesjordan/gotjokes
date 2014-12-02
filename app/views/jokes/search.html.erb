@@ -26,16 +26,15 @@
 
         FILTER BY: <br><br>
         JOKE: <input type = "text" name="jokeFilter">
-        form_for @user, :url => {:action => "YourActionName"}
         <br><br>
         <input type="submit" value="Submit">
 
       </form>
       <br><br>
 
-
+     
         <% @jokeData.each do |j| %>
-          <%= j.description %>
+          <%= j.description %><br>
         <% end %>
 
 
