@@ -17,9 +17,11 @@ Gotjokes::Application.routes.draw do
   # additional joke routes for json and sql searches
   get  'jokes/search'   => 'jokes#search', as: :jokes_search  
   post 'jokes/search'   => 'jokes#search', as: :jokes_searchfilter 
-  get 'jokes/welcome'   => 'jokes#jokeofday', as: :welcome_jokes   
+  get 'jokes/json'   => 'jokes#jokeofday', as: :json_jokes 
+
 
   # default joke routes
+  get 'jokes/home'      =>    'jokes#home',    as: :home_jokes
   get 'jokes/index'     =>    'jokes#index',    as: :jokes
   get 'jokes/new'       =>    'jokes#new',      as: :new_jokes
   get "jokes/:id"       =>    'jokes#show',     as: :joke

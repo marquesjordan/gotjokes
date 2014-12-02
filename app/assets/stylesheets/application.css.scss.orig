@@ -154,6 +154,11 @@ h3{
 	background-color: white;
 	border: 1px solid #F0F0F1;
 }
+.please{
+  font-size: 26px;
+  color: #EE5D5F;
+  font-weight: bold;
+}
 
 #trend{
 	background-color: white;
@@ -357,10 +362,8 @@ h3{
   background-color: red;
   display: table;
 }
-
 <<<<<<< HEAD
 
-=======
 //homepage
 
 #h_videoofday {
@@ -619,5 +622,14 @@ h3{
         margin-right: 0;
     }
 }
->>>>>>> b262699f439889778c1d127c78e4b6a104e19d45
   
+=======
+  
+// YOUTUBE DESCRIPTION LENGTH LIMIT
+.Ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+// END OF YOUTUBE DESCRIPTION LENGTH LIMIT
+>>>>>>> chance
