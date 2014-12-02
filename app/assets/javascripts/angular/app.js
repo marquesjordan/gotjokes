@@ -28,7 +28,7 @@ angular.module('myApp', ['ui.router', 'templates'])
 
 
 // START OF CONTROLLER
-.controller('searchCtrl', function($scope, api, $state, $stateParams) {
+.controller('searchCtrl', ['$scope', 'api', '$state', '$stateParams', function($scope, api, $state, $stateParams) {
   console.log('working controller');
   console.log($stateParams);
   $scope.test = "test test test TEST";
@@ -59,13 +59,13 @@ angular.module('myApp', ['ui.router', 'templates'])
 
   $scope.executeSearch();
 
-})
+}])
 // END OF CONTROLLER
 
 
 
 // START OF SERVICES
-.service('api', function($http) {
+.service('api', ['$http', function($http) {
   return {
 
     searchYoutube: function(query) {
@@ -89,5 +89,5 @@ angular.module('myApp', ['ui.router', 'templates'])
 
     }
   };
-});
+}]);
 // END OF SERVICES
