@@ -36,7 +36,6 @@ angular.module('myApp', ['ui.router', 'templates'])
 
   $scope.state = $state.current;
   $scope.param = $stateParams.param;
-  console.log($scope.param);
 
   
   $scope.executeSearch = function() {
@@ -77,7 +76,7 @@ angular.module('myApp', ['ui.router', 'templates'])
           key: 'AIzaSyDLoUrEVNMmog_PAzs81jFwtEjcXQzO-K4',
           part: 'snippet',
           type: 'video',
-          maxResults: '8',
+          maxResults: '12',
           fields: 'items/id,items/snippet/title,items/snippet/description,items/snippet/thumbnails/default,items/snippet/channelTitle',
           q: query
         }

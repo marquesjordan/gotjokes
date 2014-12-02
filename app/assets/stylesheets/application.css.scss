@@ -358,3 +358,10 @@ h3{
   display: table;
 }
   
+// YOUTUBE DESCRIPTION LENGTH LIMIT
+.Ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+// END OF YOUTUBE DESCRIPTION LENGTH LIMIT
