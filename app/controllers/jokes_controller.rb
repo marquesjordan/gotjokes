@@ -102,7 +102,7 @@ class JokesController < ApplicationController
       'SELECT id, views, totalvotes, video_file_name, video_content_type, video_file_size, video_updated_at, category_id, user_id, youtube, description ' +  
       'FROM jokes ' +
       'WHERE UPPER(description) LIKE UPPER(?) ' +
-      'ORDER BY description ', "%#{jokeWhere}%"])
+      'ORDER BY description ', "%#{ }%"])
   end 
   #======== SQL SEARCH END ===================================================================
 

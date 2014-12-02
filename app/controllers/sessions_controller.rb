@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
     def destroy
         # Kill our cookies!
         reset_session
-        redirect_to root_path, notice: "Logged out!"
+        redirect_to jokes_path, notice: "Logged out!"
     end
 end
 
