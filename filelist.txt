@@ -1,0 +1,200 @@
+total 0
+drwxr-xr-x   3 bobbyfisher  staff   102B Nov 17 14:55 mailers
+drwxr-xr-x  12 bobbyfisher  staff   408B Dec  1 13:24 views
+drwxr-xr-x  11 bobbyfisher  staff   374B Dec  1 13:26 models
+drwxr-xr-x  11 bobbyfisher  staff   374B Dec  1 17:21 helpers
+drwxr-xr-x  14 bobbyfisher  staff   476B Dec  1 17:21 controllers
+drwxr-xr-x   7 bobbyfisher  staff   238B Dec  1 17:21 assets
+
+app/mailers:
+
+app/views:
+total 0
+drwxr-xr-x   4 bobbyfisher  staff   136B Nov 17 21:19 votes
+drwxr-xr-x   6 bobbyfisher  staff   204B Nov 17 21:19 user_comments
+drwxr-xr-x   7 bobbyfisher  staff   238B Nov 24 17:55 categories
+drwxr-xr-x   3 bobbyfisher  staff   102B Nov 24 18:32 application
+drwxr-xr-x   3 bobbyfisher  staff   102B Nov 25 16:38 sessions
+drwxr-xr-x   3 bobbyfisher  staff   102B Dec  1 13:24 searches
+drwxr-xr-x   4 bobbyfisher  staff   136B Dec  1 13:26 users
+drwxr-xr-x   7 bobbyfisher  staff   238B Dec  1 13:26 profiles
+drwxr-xr-x   5 bobbyfisher  staff   170B Dec  1 17:21 layouts
+drwxr-xr-x  15 bobbyfisher  staff   510B Dec  1 17:21 jokes
+
+app/views/votes:
+total 16
+-rw-r--r--  1 bobbyfisher  staff   129B Nov 17 21:19 new.html.erb
+-rw-r--r--  1 bobbyfisher  staff    92B Nov 17 21:19 index.html.erb
+
+app/views/user_comments:
+total 32
+-rw-r--r--  1 bobbyfisher  staff    13B Nov 17 21:19 show.html.erb
+-rw-r--r--  1 bobbyfisher  staff    12B Nov 17 21:19 new.html.erb
+-rw-r--r--  1 bobbyfisher  staff   170B Nov 17 21:19 index.html.erb
+-rw-r--r--  1 bobbyfisher  staff    13B Nov 17 21:19 edit.html.erb
+
+app/views/categories:
+total 40
+-rw-r--r--  1 bobbyfisher  staff   260B Nov 24 17:55 show.html.erb
+-rw-r--r--  1 bobbyfisher  staff   292B Nov 24 17:55 new.html.erb
+-rw-r--r--  1 bobbyfisher  staff   622B Nov 24 17:55 index.html.erb
+-rw-r--r--  1 bobbyfisher  staff   124B Nov 24 17:55 edit.html.erb
+-rw-r--r--  1 bobbyfisher  staff   620B Nov 24 17:55 _form.html.erb
+
+app/views/application:
+total 8
+-rw-r--r--  1 bobbyfisher  staff    19B Nov 24 19:00 index.html.erb
+
+app/views/sessions:
+total 8
+-rw-r--r--  1 bobbyfisher  staff   928B Nov 25 16:38 new.html.erb
+
+app/views/searches:
+total 8
+-rw-r--r--  1 bobbyfisher  staff   107B Dec  1 13:24 index.html.erb
+
+app/views/users:
+total 8
+-rw-r--r--  1 bobbyfisher  staff     0B Nov 20 16:59 index.html.erb
+-rw-r--r--  1 bobbyfisher  staff   1.1K Dec  1 13:26 new.html.erb
+
+app/views/profiles:
+total 40
+-rw-r--r--  1 bobbyfisher  staff    81B Nov 17 21:19 new.html.erb
+-rw-r--r--  1 bobbyfisher  staff   713B Nov 17 21:19 index.html.erb
+-rw-r--r--  1 bobbyfisher  staff   1.7K Dec  1 13:26 show.html.erb
+-rw-r--r--  1 bobbyfisher  staff   201B Dec  1 13:26 edit.html.erb
+-rw-r--r--  1 bobbyfisher  staff   887B Dec  1 13:26 _form.html.erb
+
+app/views/layouts:
+total 24
+-rw-r--r--  1 bobbyfisher  staff   452B Nov 24 19:15 application.html.erb.orig
+-rw-r--r--  1 bobbyfisher  staff   440B Dec  1 18:08 application.html.erb
+-rw-r--r--  1 bobbyfisher  staff   2.0K Dec  1 18:18 _form.html.erb
+
+app/views/jokes:
+total 120
+-rw-r--r--  1 bobbyfisher  staff    68B Nov 19 21:02 edit.html.erb
+-rw-r--r--  1 bobbyfisher  staff   511B Nov 24 17:55 new.html.erb.orig
+-rw-r--r--  1 bobbyfisher  staff   1.0K Nov 24 17:55 index.html.erb.orig
+-rw-r--r--  1 bobbyfisher  staff   209B Nov 24 17:55 edit.html.erb.orig
+-rw-r--r--  1 bobbyfisher  staff   3.9K Nov 24 19:13 show.html.erb.orig
+-rw-r--r--  1 bobbyfisher  staff   1.1K Nov 24 19:13 new.html.erb
+-rw-r--r--  1 bobbyfisher  staff   2.0K Dec  1 13:24 index.html.erb
+-rw-r--r--  1 bobbyfisher  staff   773B Dec  1 13:26 _form.erb
+-rw-r--r--  1 bobbyfisher  staff   108B Dec  1 14:01 welcome.html.erb
+-rw-r--r--  1 bobbyfisher  staff   286B Dec  1 17:21 test.html.erb
+-rw-r--r--  1 bobbyfisher  staff   4.4K Dec  1 17:21 show.html.erb
+-rw-r--r--  1 bobbyfisher  staff   1.4K Dec  1 17:45 search.html.erb
+-rw-r--r--  1 bobbyfisher  staff   6.4K Dec  1 18:13 home.html.erb
+
+app/models:
+total 56
+drwxr-xr-x  3 bobbyfisher  staff   102B Nov 17 14:55 concerns
+-rw-r--r--  1 bobbyfisher  staff    72B Nov 24 17:55 vote.rb
+-rw-r--r--  1 bobbyfisher  staff    80B Nov 24 17:55 user_comment.rb
+-rw-r--r--  1 bobbyfisher  staff   333B Nov 24 17:55 joke.rb.orig
+-rw-r--r--  1 bobbyfisher  staff    58B Nov 24 17:55 category.rb
+-rw-r--r--  1 bobbyfisher  staff   647B Dec  1 13:26 user.rb
+-rw-r--r--  1 bobbyfisher  staff   310B Dec  1 13:26 profile.rb
+-rw-r--r--  1 bobbyfisher  staff   316B Dec  1 13:26 joke.rb
+
+app/models/concerns:
+
+app/helpers:
+total 72
+-rw-r--r--  1 bobbyfisher  staff    29B Nov 17 14:55 application_helper.rb
+-rw-r--r--  1 bobbyfisher  staff    23B Nov 17 21:19 votes_helper.rb
+-rw-r--r--  1 bobbyfisher  staff    30B Nov 17 21:19 user_comments_helper.rb
+-rw-r--r--  1 bobbyfisher  staff    26B Nov 17 21:19 profiles_helper.rb
+-rw-r--r--  1 bobbyfisher  staff    23B Nov 18 18:00 jokes_helper.rb
+-rw-r--r--  1 bobbyfisher  staff    23B Nov 20 16:59 users_helper.rb
+-rw-r--r--  1 bobbyfisher  staff    26B Nov 20 16:59 sessions_helper.rb
+-rw-r--r--  1 bobbyfisher  staff    28B Nov 24 17:55 categories_helper.rb
+-rw-r--r--  1 bobbyfisher  staff    22B Dec  1 17:21 home_helper.rb
+
+app/controllers:
+total 88
+drwxr-xr-x  3 bobbyfisher  staff   102B Nov 17 14:55 concerns
+-rw-r--r--  1 bobbyfisher  staff   754B Nov 24 17:55 votes_controller.rb
+-rw-r--r--  1 bobbyfisher  staff   1.3K Nov 24 17:55 user_comments_controller.rb
+-rw-r--r--  1 bobbyfisher  staff   843B Nov 24 17:55 categories_controller.rb
+-rw-r--r--  1 bobbyfisher  staff   1.3K Nov 24 19:13 jokes_controller.rb.orig
+-rw-r--r--  1 bobbyfisher  staff   262B Dec  1 13:24 searches_controller.rb
+-rw-r--r--  1 bobbyfisher  staff   1.2K Dec  1 13:26 users_controller.rb
+-rw-r--r--  1 bobbyfisher  staff   755B Dec  1 13:26 sessions_controller.rb
+-rw-r--r--  1 bobbyfisher  staff   1.0K Dec  1 13:26 profiles_controller.rb
+-rw-r--r--  1 bobbyfisher  staff   520B Dec  1 17:21 application_controller.rb
+-rw-r--r--  1 bobbyfisher  staff    68B Dec  1 17:28 home_controller.rb
+-rw-r--r--  1 bobbyfisher  staff   2.9K Dec  1 18:06 jokes_controller.rb
+
+app/controllers/concerns:
+
+app/assets:
+total 0
+drwxr-xr-x  12 bobbyfisher  staff   408B Dec  1 17:21 javascripts
+drwxr-xr-x   5 bobbyfisher  staff   170B Dec  1 17:21 templates
+drwxr-xr-x  25 bobbyfisher  staff   850B Dec  1 17:21 images
+drwxr-xr-x  14 bobbyfisher  staff   476B Dec  1 17:23 stylesheets
+
+app/assets/javascripts:
+total 72
+-rw-r--r--  1 bobbyfisher  staff   211B Nov 17 21:19 votes.js.coffee
+-rw-r--r--  1 bobbyfisher  staff   211B Nov 17 21:19 user_comments.js.coffee
+-rw-r--r--  1 bobbyfisher  staff   211B Nov 17 21:19 profiles.js.coffee
+-rw-r--r--  1 bobbyfisher  staff   211B Nov 18 18:00 jokes.js.coffee
+-rw-r--r--  1 bobbyfisher  staff   211B Nov 20 16:59 users.js.coffee
+-rw-r--r--  1 bobbyfisher  staff   211B Nov 20 16:59 sessions.js.coffee
+-rw-r--r--  1 bobbyfisher  staff   211B Nov 24 17:55 categories.js.coffee
+-rw-r--r--  1 bobbyfisher  staff   790B Nov 25 09:49 application.js
+-rw-r--r--  1 bobbyfisher  staff   211B Dec  1 17:21 home.js.coffee
+drwxr-xr-x  3 bobbyfisher  staff   102B Dec  1 17:21 angular
+
+app/assets/javascripts/angular:
+total 8
+-rw-r--r--  1 bobbyfisher  staff   2.2K Dec  1 17:21 app.js
+
+app/assets/templates:
+total 24
+-rw-r--r--  1 bobbyfisher  staff   291B Nov 25 16:38 list.html.erb
+-rw-r--r--  1 bobbyfisher  staff    32B Dec  1 13:24 show.html.erb
+-rw-r--r--  1 bobbyfisher  staff   1.7K Dec  1 18:08 home.html.erb
+
+app/assets/images:
+total 2184
+-rw-r--r--  1 bobbyfisher  staff   4.3K Nov 19 20:58 logo1.jpeg
+-rw-r--r--  1 bobbyfisher  staff    24K Nov 24 17:43 logo1.png
+-rw-r--r--  1 bobbyfisher  staff    37K Nov 24 17:55 like_thumbs_down.png
+-rw-r--r--  1 bobbyfisher  staff   103K Nov 24 17:55 Like_thumb.png
+-rw-r-----@ 1 bobbyfisher  staff    21K Nov 24 19:46 login.png
+-rw-r--r--  1 bobbyfisher  staff    29K Nov 25 09:49 signup1.png
+-rw-r--r--  1 bobbyfisher  staff    15K Dec  1 13:26 missing.png
+-rw-r--r--  1 bobbyfisher  staff    25K Dec  1 17:21 youtube.png
+-rw-r--r--  1 bobbyfisher  staff   1.8K Dec  1 17:21 youtube-icon.png
+-rw-r--r--  1 bobbyfisher  staff   171K Dec  1 17:21 vidthumb2.png
+-rw-r--r--  1 bobbyfisher  staff   143K Dec  1 17:21 video-thum.png
+-rw-r--r--  1 bobbyfisher  staff   1.8K Dec  1 17:21 twitter-Icon.jpg
+-rw-r--r--  1 bobbyfisher  staff   4.5K Dec  1 17:21 thumbsupdown.jpg
+-rw-r--r--  1 bobbyfisher  staff   317K Dec  1 17:21 red-curtain-1.gif
+-rw-r--r--  1 bobbyfisher  staff    18K Dec  1 17:21 jester.jpg
+-rw-r--r--  1 bobbyfisher  staff    37K Dec  1 17:21 gotjokestext.png
+-rw-r--r--  1 bobbyfisher  staff   1.3K Dec  1 17:21 facebook_icon.gif
+-rw-r--r--  1 bobbyfisher  staff   9.4K Dec  1 17:21 blkvidthumb.jpg
+-rw-r--r--  1 bobbyfisher  staff    40K Dec  1 17:21 GotJokes_Logo.png
+-rw-r--r--  1 bobbyfisher  staff   5.1K Dec  1 17:21 youtube.jpeg
+-rw-r--r--  1 bobbyfisher  staff    35K Dec  1 17:21 logo_gotjs.png
+
+app/assets/stylesheets:
+total 128
+-rw-r--r--  1 bobbyfisher  staff   176B Nov 17 21:19 votes.css.scss
+-rw-r--r--  1 bobbyfisher  staff   184B Nov 17 21:19 user_comments.css.scss
+-rw-r--r--  1 bobbyfisher  staff   179B Nov 17 21:19 profiles.css.scss
+-rw-r--r--  1 bobbyfisher  staff   176B Nov 18 18:00 jokes.css.scss
+-rw-r--r--  1 bobbyfisher  staff   176B Nov 20 16:59 users.css.scss
+-rw-r--r--  1 bobbyfisher  staff   179B Nov 20 16:59 sessions.css.scss
+-rw-r--r--  1 bobbyfisher  staff   181B Nov 24 17:55 categories.css.scss
+-rw-r--r--  1 bobbyfisher  staff    21B Nov 25 16:38 list.css.scss
+-rw-r--r--  1 bobbyfisher  staff   2.7K Dec  1 17:21 home.css.scss
+-rw-r--r--  1 bobbyfisher  staff   2.7K Dec  1 17:21 custom.css.scss
+-rw-r--r--  1 bobbyfisher  staff   8.8K Dec  1 17:21 application.css.scss.orig
+-rw-r--r--  1 bobbyfisher  staff   8.8K Dec  1 17:23 application.css.scss

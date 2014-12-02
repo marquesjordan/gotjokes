@@ -58,6 +58,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# gem used for api
+gem 'httparty'
+
 # Use ActiveModel has_secure_password
 
 

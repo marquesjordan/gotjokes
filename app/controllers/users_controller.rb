@@ -18,7 +18,7 @@ class UsersController < ApplicationController
             Profile.create(:user_id => @user.id, :name => @user.username)
 
             session[:user_id] = @user.id
-            format.html { redirect_to users_path, notice: 'User was successfully created.' }
+            format.html { redirect_to jokes_path, notice: 'User was successfully created.' }
             format.json { render action: 'show', status: :created, location: @user }
           else
             format.html { render action: 'new' }

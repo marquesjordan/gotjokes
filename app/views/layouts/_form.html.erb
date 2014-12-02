@@ -1,40 +1,51 @@
 <!-- start of nav bar -->
-  <nav class="navbar navbar-inverse" role="navigation">
-    <div class="container-fluid">
-      <div class="navbarwidth">
-        <div class="navbar-header navbar-brand" >
-          <%= link_to image_tag("logo1.png"), jokes_path, method: :get %>
+<nav class="navbar2 navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <div class="navbarwidth">
+      <div class="navbar-header navbar-brand" >
+        <%= link_to image_tag("logo1.png"), jokes_path, method: :get %>
+      </div>
+      <div class="navbar-header">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="../#/youtube/">Youtube Jokes</a> </li>
+            <li><%= link_to "Submit Joke", new_jokes_path %></li>
+            <li><%= link_to "Joke of the Day", home_jokes_path %></li>
+          </ul>
         </div>
-        <div class="navbar-header">
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li><%= link_to "Jokes", jokes_path %></li>
-              <li><%= link_to "New", new_jokes_path %></li>
-            </ul>
-          </div>
-        </div>
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control2" placeholder="Search">
-          </div>
-          <button type="submit" class="btn2 btn-default">Submit</button>
-        </form>
-        <div class="navbar-text navbar-right">
-          <div class="marginRight">
-            <% if current_user %>
+      </div>
+
+      <!-- START OF SEARCH FUNCTIONS -->
+           <form class="navbar-form navbar-left" role="search"> 
+        <!-- <div class="form-group">
+          <input type="text" name="jokeFilter"class="form-control2" placeholder="Search">
+        </div> -->
+
+        <!-- OLD YOUTUBE QUERY -->         
+          <!--  <input ng-model="query" type="text" placeholder="Search" >
+          <a class="btn btn-default" ui-sref="home({param: query})">SEARCH YOUTUBE</a> -->
+
+          <%#= link_to "Submit", jokes_searchfilter_path, :class => "btn2 btn-default"  %>
+          </form> 
+
+          <!-- LOG IN AND LOG OUT BUTTONS AND LINKS -->        
+      <div class="navbar-text navbar-right">
+        <div class="marginRight">
+              <% if current_user %>
               Welcome <%= link_to current_user.username, profile_path(current_profile.id) %>
               <!-- buttons always do POST, Links always do Get by default  -->
               <%= link_to "Log Out", logout_path, method: :get, :class => "btn btn-danger btn-xs" %> 
-            <% else %>
+              <% else %>
               <%= link_to "Log In", new_session_path, method: :get, :class => "btn btn-danger btn-xs"  if !@is_login %>
               <%= link_to "Sign Up", new_user_path, method: :get, :class => "btn btn-danger btn-xs"  if !@is_login %>
-            <% end %>
-          </div>
+              <% end %>
         </div>
       </div>
+
     </div>
-  </nav>
-  <!-- end of nav bar -->
+  </div>
+</nav>
+    <!-- end of nav bar -->
 
 
- 
+

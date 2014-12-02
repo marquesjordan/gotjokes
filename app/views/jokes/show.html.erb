@@ -27,51 +27,61 @@
 							</div>
 
 							<% if @voted %>
-								<div class="row">
-										<div class="col-sm-2 funny">
-											<p>Likes: <%= @likes.length %></p>
-										</div>
-										<div class="col-sm-8 funny">
-											<% if @voted.vote == 1 %>
-												<h1 class="voted">You Liked This Joke</h1>
-											<% else %>
-												<h1 class="voted">You Did Not Like This Joke</h1>
-											<% end %>
-										</div>
-										<div class="col-sm-2 funny">
-											<p>Dislikes: <%= @dislikes.length %></p> 
-											
-										</div>
-								</div>
-
+									<div class="row">
+											<div class="col-sm-2 funny">
+												<p>Likes: <%= @likes.length %></p>
+											</div>
+											<div class="col-sm-8 funny">
+												<% if @voted.vote == 1 %>
+													<h1 class="voted">You Liked This Joke</h1>
+												<% else %>
+													<h1 class="voted">You Did Not Like This Joke</h1>
+												<% end %>
+											</div>
+											<div class="col-sm-2 funny">
+												<p>Dislikes: <%= @dislikes.length %></p> 
+												
+											</div>
+									</div>
 							<% else %>
-								<div class="row">
-										<div class="col-sm-3 funny">
-											<%= link_to image_tag("Like_thumb.png", size: "75x75", :border => 0), new_vote_path(:vote => 1, :user_id => current_user, :joke_id => @joke.id), {:action => 'create', :controller => 'votes'}%><br>
-											<p>Likes: <%= @likes.length %></p> 
-										</div>
-										<div class="col-sm-6 funny">
-											<h2>Funny or Not?</h2>
-										</div>
-										<div class="col-xs-3 col-sm-3 funny">
-											<%= link_to image_tag("like_thumbs_down.png", size: "75x75", :border => 0), new_vote_path(:vote => -1, :user_id => current_user, :joke_id => @joke.id), {:action => 'create', :controller => 'votes'}%>
-											<p>Dislikes: <%= @dislikes.length %></p> 
-										</div>
-								</div>
+								<% if current_user %>
+									<div class="row">
+											<div class="col-sm-3 funny">
+												<%= link_to image_tag("Like_thumb.png", size: "75x75", :border => 0), new_vote_path(:vote => 1, :user_id => current_user, :joke_id => @joke.id), {:action => 'create', :controller => 'votes'}%><br>
+												<p>Likes: <%= @likes.length %></p> 
+											</div>
+											<div class="col-sm-6 funny">
+												<h2>Funny or Not?</h2>
+											</div>
+											<div class="col-xs-3 col-sm-3 funny">
+												<%= link_to image_tag("like_thumbs_down.png", size: "75x75", :border => 0), new_vote_path(:vote => -1, :user_id => current_user, :joke_id => @joke.id), {:action => 'create', :controller => 'votes'}%>
+												<p>Dislikes: <%= @dislikes.length %></p> 
+											</div>
+									</div>
+								<% else %>
+									<div>
+										<p class="text-center please"><%= link_to "Sign Up", new_user_path %>/<%= link_to "Sign In", new_session_path %> To Vote</p>
+			
+									</div>
+								<% end %>
 							<% end %>
 
 					<div class="comments"> 	
 									
 							<h1 id="commenttitle">Comments:</h1>
-
-							<%= form_for(@usercomment, url: {controller: "user_comments", action: "create"}) do %>
-										<%= hidden_field_tag(:joke_id, @joke.id) %>
-										
-										<%= text_area_tag :description, nil, class: "form-control"  %><br>
-										<%= submit_tag( "Submit Comment", class: "btn btn-danger") %>
-										
+							<% if current_user %>
+								<%= form_for(@usercomment, url: {controller: "user_comments", action: "create"}) do %>
+											<%= hidden_field_tag(:joke_id, @joke.id) %>
+											
+											<%= text_area_tag :description, nil, class: "form-control"  %><br>
+											<%= submit_tag( "Submit Comment", class: "btn btn-danger") %>
+											
+								<% end %>
+							<% else %>
+								<div>
+									<%= text_area_tag :description, nil, class: "form-control", placeholder: "SignUp/SignIn To Leave A Comment", :disabled => 'disabled' %><br>	
+								</div>
 							<% end %>
-
 							<br><div id="commentlist"></div>
 						
 							<% @jokecomments.order("created_at desc").each do |jc| %>
