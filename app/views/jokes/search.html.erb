@@ -43,25 +43,24 @@
 
 
 
-      <!--  <%# @jokeData.each do |j| %>
+      <% @jokeData.each do |j| %>
         <div class="thumbs">
-          <%# if j.video_file_name %>
+          <% if j.video_file_name %>
             <br>
-            <%#= link_to video_tag(j.video.url, size: "200x190"), joke_path(j) %>
+            <%= link_to video_tag(j.video.url, size: "200x190"), joke_path(j) %>
             
-          <%# else %>
+          <% else %>
               <div id="space"></div>
-              <%# youtube_image_id = j.youtube.split("=").last %>
-              <%# img_src = "http://img.youtube.com/vi/#{youtube_image_id}/default.jpg" %>
-              <%#= link_to image_tag(img_src, size: "200x130"), joke_path(j) %><br><br><br>
-          <%# end %> 
+              <% youtube_image_id = j.youtube.split("=").last %>
+              <% img_src = "http://img.youtube.com/vi/#{youtube_image_id}/default.jpg" %>
+              <%= link_to image_tag(img_src, size: "200x130"), joke_path(j) %><br><br><br>
+          <% end %> 
 
 
-          <h2>Views:</h2> <h3><%#= j.views %></h3><br> 
-          <h2>Votes:</h2> <h3><%#= j.totalvotes %></h3><br>
+          <h2>Views:</h2> <h3><%= j.views %></h3><br> 
+          <h2>Votes:</h2> <h3><%= j.totalvotes %></h3><br>
           
         </div>
-      <%# end %>  -->
-    </div>        
+      <% end %>    </div>        
   </div>
 </div>
