@@ -13,12 +13,29 @@ class JokesController < ApplicationController
     
   	@joke = Joke.new(joke_params)
     @joke.user_id = @user.id
-  	if @joke.save
-  		redirect_to jokes_path
-  	else
-  		render 'new'
-  	end
-  end
+  	
+    respond_to do |format|
+
+    if @joke.save
+            Joke.create(:user_id => @user.id)
+
+            session[:user_id] = @user.id
+            format.html { redirect_to jokes_path, notice: 'User was successfully created.' }
+            format.json { render action: 'show', status: :created, location: @joke }
+          else
+            format.html { render action: 'new' }
+            format.json { render json: @joke.errors, status: :unprocessable_entity }
+          end
+    end
+end
+
+
+   #  if @joke.save
+  	# 	redirect_to jokes_path
+  	# else
+  	# 	render 'new'
+  	# end
+  # end
 
   def show
     @joke = Joke.find(params[:id])
