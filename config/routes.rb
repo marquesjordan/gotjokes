@@ -4,7 +4,7 @@ Gotjokes::Application.routes.draw do
   resources :categories
 
 
-  root 'jokes#home'
+  root 'application#index'
   get 'jokes/test' => 'jokes#test' 
   
 
