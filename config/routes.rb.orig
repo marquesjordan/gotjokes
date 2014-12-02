@@ -3,9 +3,15 @@ Gotjokes::Application.routes.draw do
 
   resources :categories
 
+<<<<<<< HEAD
+  root 'application#index'  
+=======
 
   root 'application#index'
+  get 'jokes/test' => 'jokes#test' 
   
+
+>>>>>>> e62a9a026eeee9abc697fd27b0bc3a7690f7a0b5
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
@@ -15,9 +21,10 @@ Gotjokes::Application.routes.draw do
   # additional joke routes for json and sql searches
   get  'jokes/search'   => 'jokes#search', as: :jokes_search  
   post 'jokes/search'   => 'jokes#search', as: :jokes_searchfilter 
-  get 'jokes/welcome'   => 'jokes#jokeofday', as: :welcome_jokes   
+  get 'jokes/json'      => 'jokes#jokeofday', as: :json_jokes 
 
   # default joke routes
+  get 'jokes/home'      =>    'jokes#home',    as: :home_jokes
   get 'jokes/index'     =>    'jokes#index',    as: :jokes
   get 'jokes/new'       =>    'jokes#new',      as: :new_jokes
   get "jokes/:id"       =>    'jokes#show',     as: :joke
@@ -45,9 +52,6 @@ Gotjokes::Application.routes.draw do
   patch 'user_comments/:id'     =>    'user_comments#update'
   delete 'user_comments/:id'    =>    'user_comments#destroy',  as: :delete_user_comment
 
-<<<<<<< HEAD
-  get 'searches/index' => 'searches#index', as: :searches
-=======
   get 'profiles/index'     =>    'profiles#index',    as: :profiles
   get 'profiles/new'       =>    'profiles#new',      as: :new_profiles
   get "profiles/:id"       =>    'profiles#show',     as: :profile
@@ -56,7 +60,8 @@ Gotjokes::Application.routes.draw do
   get "profiles/:id/edit"  =>    'profiles#edit',     as: :edit_profile
   patch 'profiles/:id'     =>    'profiles#update'
   delete 'profiles/:id'    =>    'profiles#destroy',  as: :delete_profile
->>>>>>> 7d342e10ca1a25b6e24ea1e4e94b58b2895c3d47
+
+  get 'searches/index' => 'searches#index', as: :searches
 
 
 end
