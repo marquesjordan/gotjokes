@@ -5,6 +5,7 @@ Gotjokes::Application.routes.draw do
 
 
   root 'jokes#home'
+  get 'jokes/test' => 'jokes#test' 
   
 
 

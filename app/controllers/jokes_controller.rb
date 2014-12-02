@@ -7,6 +7,10 @@ class JokesController < ApplicationController
   	@joke = Joke.new
   end
 
+  def test
+    
+  end
+
   def create
     @user = current_user
     
@@ -32,8 +36,9 @@ class JokesController < ApplicationController
     v = Vote.where(joke_id: @joke.id).length
     if v == 0
       Vote.create(user_id: @joke.user_id, vote: 1, joke_id: @joke.id )
+      @voted = Vote.where(user_id: current_user.id).last
     end
-    @voted = Vote.where(user_id: current_user.id).last
+    
     
 
     @usercomment = UserComment.new
