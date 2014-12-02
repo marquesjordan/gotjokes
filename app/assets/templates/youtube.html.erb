@@ -1,5 +1,5 @@
-{{test}}
-<!-- start of blackened sidebars -->
+<!-- <div ng-app="myApp" ng-controller="searchCtrl">
+ --><!-- start of blackened sidebars -->
   <div class="whole">
     <div class="whole-left">
     </div>
@@ -17,15 +17,15 @@
         <div class="col-md-8 ">
           <br>
           <!-- YOUTUBE SEARCH QUERY -->
-          <input class="form-control2" ng-model="query" type="text" placeholder="YouTube Search" >
-          <a class="btn btn-danger btn-sm" ui-sref="home({param: 'jokes' + query})">Search youtube</a>
+          <input class="form-control2" ng-model="query" type="text" placeholder="YOUTUBE" >
+          <a class="btn2 btn-default btn-sm" ui-sref="youtube({param: 'jokes' + query})">SEARCH</a>
 
           <!-- CATEGORIES YOUTUBE QUERYS -->
-          <a class="btn btn-danger btn-sm" ui-sref="home({param: 'yo mama jokes'})">Yo Mama</a>
-          <a class="btn btn-danger btn-sm" ui-sref="home({param: 'blonde jokes'})">Blond Jokes</a>
-          <a class="btn btn-danger btn-sm" ui-sref="home({param: 'Cross the road jokes'})">Cross The Road</a>
-          <a class="btn btn-danger btn-sm" ui-sref="home({param: 'Politics Jokes'})">Politics</a>
-          <a class="btn btn-danger btn-sm" ui-sref="home({param: 'Work Jokes'})">Work Jokes</a>
+          <a class="btn btn-danger btn-sm" ui-sref="youtube({param: 'yo mama jokes'})">Yo Mama</a>
+          <a class="btn btn-danger btn-sm" ui-sref="youtube({param: 'blonde jokes'})">Blond Jokes</a>
+          <a class="btn btn-danger btn-sm" ui-sref="youtube({param: 'Cross the road jokes'})">Cross The Road</a>
+          <a class="btn btn-danger btn-sm" ui-sref="youtube({param: 'Politics Jokes'})">Politics</a>
+          <a class="btn btn-danger btn-sm" ui-sref="youtube({param: 'Work Jokes'})">Work Jokes</a>
           
           
         </div>
@@ -43,5 +43,6 @@
       </div>
     </div>
   </div>
+</div>
   <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
 

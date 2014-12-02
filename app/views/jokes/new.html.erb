@@ -10,7 +10,20 @@
 							<h1>Add A New Joke</h1>
 						
 							<div>
-								<%= form_for @joke, :url => {:action => :create}  do |f| %>
+								  <%= form_for @joke, :url => {:action => :create} do |f| %>
+
+
+									  <% if @joke.errors.any? %>
+							          <div id="error_explanation2">
+							            <h2>FORM IS INVALID</h2>
+							            <br>
+							            <ul>
+							              <% @joke.errors.full_messages.each do |message| %>
+							                <li><%= message %></li>
+							              <% end %>
+							            </ul>
+							          </div>
+							           <% end %>
 
 									<div>
 										<p class="lead">Upload a video<p>
@@ -27,7 +40,7 @@
 									</div><br>
 								
 									<div><%= submit_tag("Post New Joke", class: "btn btn-danger") %></div>
-
+									<br>
 								<% end %> 
 							</div>
 						</div>

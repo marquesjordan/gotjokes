@@ -1,9 +1,8 @@
 Gotjokes::Application.routes.draw do
 
+  root 'application#index'  
 
   resources :categories
-
-  root 'application#index'  
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
