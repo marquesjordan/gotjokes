@@ -355,12 +355,13 @@ h3{
 
 #h_videoofday {
 	position: relative;
-	width: 130%;
+	width: 136%;
   z-index: 2;
+  
 }
 
 #h_curtain {
-    height: 150%;
+    height: 90%;
     width: 130%;
     z-index: 7;
     position: absolute;
@@ -437,12 +438,15 @@ h3{
 
 }
 
-.h_medvidthumb {
+#h_medvidthumb {
     width: 250px;
+    height: 200px;
+
 }
 
-.h_medvidthumbwhite {
-    width: 200px;
+#h_medvidthumbwhite {
+    width: 150px;
+    height: 100px;
 }
 
 .h_thumbs {
