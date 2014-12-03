@@ -1,128 +1,101 @@
-<div class="h_container">
-        <div class="row">
-           
-            <article class="col-sm-8 col-sm-push-4">
-                <img src="/assets/blkvidthumb.jpg" class="h_smallvidthumb" alt="vimeoplayer" title="vimeoplayer"><img src="/assets/blkvidthumb.jpg" class="h_smallvidthumb" alt="vimeoplayer" title="vimeoplayer"><img src="/assets/blkvidthumb.jpg" class="h_smallvidthumb" alt="vimeoplayer" title="vimeoplayer"><img src="/assets/blkvidthumb.jpg" class="h_smallvidthumb" alt="vimeoplayer" title="vimeoplayer">
-              <div class="header">
-                
-                
-              </div>
-             
-             <div class="h_underheader">
-              <h2 class="h_h2">Joke of the day!</h2>
-                <img src="/assets/red-curtain-1.gif" id="h_curtain" alt="redcurtain" title="redcurtain">
-                
-                <img src="/assets/vidthumb2.png" id="h_videoofday" class="h_shadow" alt="vidthumb" title="vidthumb"><div id="h_shadowbox" class="h_shadow"></div>
-                <br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
 
-                
-              
-                <div class="row">
-                 
-
-                  </div>
-                  
-                  <div class="under_vid">
-                    <h3 class"h_h3">Funny cat video</h3>
-                <p class="h_viddescription">This cat is a riot!</p>
-                <img src="/assets/thumbsupdown.jpg" class="h_thumbs" alt="thumbsupdown" title="thumbsupdown">
-              </div>
-
-                </div>
-                  
-                
-
-          
-
-             </article>
-             <aside class="col-sm-4 col-sm-pull-8">
-               <img src="/assets/gotjokestext.png" class="h_gotjokes" alt="gotjokes" title="gotjokes">
-                <img src="/assets/jester.jpg" class="h_jester" alt="jester" title="jester">
-                  
-                <!-- Sidebar -->
+        <%= image_tag("/assets/logo.png", class: 'h_logo', height: '300', width: '300') %>
+        <br><br>
         <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Categories:
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Clean & Corny</a>
-                </li>
-                <li>
-                    <a href="#">Dark & Dirty</a>
-                </li>
-                <li>
-                    <a href="#">Chiild's Play</a>
-                </li>
-                <li>
-                    <a href="#">PG-13</a>
-                </li>
-                <li>
-                    <a href="#">Rated-R</a>
-                </li>
-                <li>
-                 <img src="/assets/youtube.png" class="youtube" alt="youtube" title="youtube">
-               </li>
-                
-            </ul>
+          <ul class="sidebar-nav">
+              <li class="sidebar-brand">
+                  <a href="#">
+                      Categories:
+                  </a>
+              </li>
+              <li>
+                  <a class="" ui-sref="youtube({param: 'yo mama jokes'})">Yo Mama</a>
+              </li>
+              <li>
+                  <a class="" ui-sref="youtube({param: 'blonde jokes'})">Blond Jokes</a>
+              </li>
+              <li>
+                  <a class="" ui-sref="youtube({param: 'Cross the road jokes'})">Cross The Road</a>
+              </li>
+              <li>
+                  <a class="" ui-sref="youtube({param: 'Politics Jokes'})">Politics</a>              
+              </li>
+              <li>
+                  <a class="" ui-sref="youtube({param: 'Work Jokes'})">Work Jokes</a>
+              </li>
+              
+          </ul>
+      </div> 
+      <br>
+    </div>
+    <!-- end of col-md-3 -->
+
+    <div class="col-md-9">
+        
+      <div class="row">
+        <div class="col-md-2"></div>
+        <h2 class="h_jokeofthedayheader"><center>Joke of the day!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></h2>
+        <div class="col-md-9">
+        
+
+
+
+
+        <img src="/assets/red-curtain-1.gif" id="h_curtain">
+        <video class="video-js vjs-default-skin vjs-big-play-centered stylevideo" controls="controls" height="500" src="/system/jokes/videos/000/000/001/original/20141201_102856.mp4?1417459917"  id="h_videoofday" class="h_shadow"></video>
+          
+       
+          
+        </div>  
+        <div class="col-md-1"></div>
+
+      </div>
+      <!-- end of row -->
+
+      <div class="row">
+        <div class="col-md-6">
         </div>
-
-
-        </aside>
-
-        <!-- /#sidebar-wrapper -->
-
-
-
-
-    
+        <div class="col-md-6">
+          <h3 class="h_h3"><br>Funny cat video</h3><br>
+          <p class="h_viddescription">This is not a cat video!</p>
+        </div>
+       
+    </div>
+  </div>
 </div>
+
 
 
 <div class="h_wrapper">    
           <div class="row">
             <div class="col-md-4">
-                <img src="/assets/blkvidthumb.jpg" class="h_medvidthumb" alt="vimeoplayer" title="vimeoplayer">  
-                <p class="h_white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at felis quis turpis gravida dapibus. Aenean pharetra sed metus eu auctor. Etiam ac erat finibus, finibus turpis eu, tempor nulla. Praesent eget erat nec diam maximus viverra et ac ex. Morbi vel quam vel felis vulputate pulvinar. 
+                <video class="video-js vjs-default-skin vjs-big-play-centered stylevideo" controls="controls" src="/system/jokes/videos/000/000/004/original/20141201_105051.mp4?1417494283" id="h_medvidthumb" alt="video" title="video"> </video>
+                <p class="h_white">Steven telling a joke
             </p>
             </div>
             <div class="col-md-4">
-                <img src="/assets/blkvidthumb.jpg" class="h_medvidthumb" alt="vimeoplayer" title="vimeoplayer"> 
-                <p class="h_white">Proin finibus sem non diam sagittis vehicula. Morbi facilisis, dolor a posuere faucibus, arcu nibh lobortis nisl, nec gravida lectus magna a neque. Maecenas ut lacus euismod, dignissim tellus vel, facilisis dolor. Ut nec dapibus mi. Fusce fringilla urna nisl, pharetra maximus quam malesuada quis. </p>
+                <video class="video-js vjs-default-skin vjs-big-play-centered stylevideo" controls="controls" src="/system/jokes/videos/000/000/005/original/20141201_101456_(1)_(1).mp4?1417495908" id="h_medvidthumb" alt="video" title="video"> </video>
+                <p class="h_white">Chance telling a joke. </p>
             </div>
             <div class="col-md-4">            
-                <img src="/assets/blkvidthumb.jpg" class="h_medvidthumb" alt="vimeoplayer" title="vimeoplayer">  
-                <p class="h_white">Nullam molestie, urna quis blandit mattis, nisi sapien euismod augue, sed tempus risus odio at lacus. Sed lobortis nibh in nibh maximus fermentum. Proin at turpis sapien. In id leo at mauris mattis scelerisque eget a neque. Nulla facilisi. </p>
+                <video class="video-js vjs-default-skin vjs-big-play-centered stylevideo" controls="controls" src="/system/jokes/videos/000/000/006/original/20141201_101921_(1).mp4?1417496020" id="h_medvidthumb" alt="video" title="video"> </video> 
+                <p class="h_white">Zach telling a joke.</p>
             </div>
          </div>
+        </div>
+
+  
+
 
 
        </div>
 
-       <div class="h_wrapperwhite">    
-          <div class="row">
-            <div class="col-md-3">
-                <img src="/assets/blkvidthumb.jpg" class="h_medvidthumbwhite" alt="vimeoplayer" title="vimeoplayer">  
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at felis quis turpis gravida dapibus. Aenean pharetra sed metus eu auctor. Etiam ac erat finibus, finibus turpis eu, tempor nulla. Praesent eget erat nec diam maximus viverra et ac ex. Morbi vel quam vel felis vulputate pulvinar. 
-            </p>
-            </div>
-            <div class="col-md-3">
-                <img src="/assets/blkvidthumb.jpg" class="h_medvidthumbwhite" alt="vimeoplayer" title="vimeoplayer"> 
-                <p>Proin finibus sem non diam sagittis vehicula. Morbi facilisis, dolor a posuere faucibus, arcu nibh lobortis nisl, nec gravida lectus magna a neque. Maecenas ut lacus euismod, dignissim tellus vel, facilisis dolor. Ut nec dapibus mi. Fusce fringilla urna nisl, pharetra maximus quam malesuada quis. </p>
-            </div>
-            <div class="col-md-3">            
-                <img src="/assets/blkvidthumb.jpg" class="h_medvidthumbwhite" alt="vimeoplayer" title="vimeoplayer">  
-                <p>Nullam molestie, urna quis blandit mattis, nisi sapien euismod augue, sed tempus risus odio at lacus. Sed lobortis nibh in nibh maximus fermentum. Proin at turpis sapien. In id leo at mauris mattis scelerisque eget a neque. Nulla facilisi. </p>
-            </div>
-            <div class="col-md-3">
-                <img src="/assets/blkvidthumb.jpg" class="h_medvidthumbwhite" alt="vimeoplayer" title="vimeoplayer"> 
-                <p>Proin finibus sem non diam sagittis vehicula. Morbi facilisis, dolor a posuere faucibus, arcu nibh lobortis nisl, nec gravida lectus magna a neque. Maecenas ut lacus euismod, dignissim tellus vel, facilisis dolor. Ut nec dapibus mi. Fusce fringilla urna nisl, pharetra maximus quam malesuada quis. </p>
-            </div>
+       
 
-
-         </div>
+       </div>
        
 
          <div class="h_footer">
@@ -130,6 +103,7 @@
 
          </div>
 
+    </div>
 
 
 
@@ -137,16 +111,8 @@
 
 
 
-</body>
-
-</html>
-          
            
          </div>
 
-
-
-
-  </div>
 
 

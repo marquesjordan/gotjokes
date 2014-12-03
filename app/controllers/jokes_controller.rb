@@ -16,12 +16,29 @@ class JokesController < ApplicationController
     
   	@joke = Joke.new(joke_params)
     @joke.user_id = @user.id
-  	if @joke.save
-  		redirect_to jokes_path
-  	else
-  		render 'new'
-  	end
-  end
+  	
+    respond_to do |format|
+
+    if @joke.save
+            Joke.create(:user_id => @user.id)
+
+            session[:user_id] = @user.id
+            format.html { redirect_to jokes_path, notice: 'User was successfully created.' }
+            format.json { render action: 'show', status: :created, location: @joke }
+          else
+            format.html { render action: 'new' }
+            format.json { render json: @joke.errors, status: :unprocessable_entity }
+          end
+    end
+end
+
+
+   #  if @joke.save
+  	# 	redirect_to jokes_path
+  	# else
+  	# 	render 'new'
+  	# end
+  # end
 
   def show
     @joke = Joke.find(params[:id])
@@ -86,9 +103,9 @@ class JokesController < ApplicationController
     if jokeWhere == ''
       @filterLabel = 'Showing all jokes'
     else
-      @filterLabel = 'Results filtered by jokes who\'s '
+      @filterLabel = 'Filtered by '
       if jokeWhere != ''
-        @filterLabel = @filterLabel + 'description matches: '+ '"' + jokeWhere + '" '
+        @filterLabel = @filterLabel + 'description: '+ '"' + jokeWhere + '" '
       end
     end
 
@@ -102,7 +119,7 @@ class JokesController < ApplicationController
       'SELECT id, views, totalvotes, video_file_name, video_content_type, video_file_size, video_updated_at, category_id, user_id, youtube, description ' +  
       'FROM jokes ' +
       'WHERE UPPER(description) LIKE UPPER(?) ' +
-      'ORDER BY description ', "%#{ }%"])
+      'ORDER BY description ', "%#{jokeWhere}%"])
   end 
   #======== SQL SEARCH END ===================================================================
 

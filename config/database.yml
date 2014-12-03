@@ -46,10 +46,10 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: gotjokes_test
+  database: gotjokes_development
   pool: 5
-  username: 
-  password:
+  username:  
+  password: 
 
 production:
   adapter: postgresql
